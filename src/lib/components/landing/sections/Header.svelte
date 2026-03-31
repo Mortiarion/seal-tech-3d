@@ -1,0 +1,72 @@
+<script lang='ts'>
+	import { ERoutesNames } from "../../../../routes/routing-helpers";
+</script>
+
+<header class="fixed top-0 right-0 left-0 z-50 mix-blend-difference">
+	<nav class="flex justify-between px-12">
+		<a href={ERoutesNames.root} >
+			<picture>
+                <source 
+                    srcset='seal-tech-3d-logo.webp' 
+                    type='image/webp'
+                >
+
+                <source 
+                    srcset='seal-tech-3d-logo.avif' 
+                    type='image/avif'
+                >
+
+                <img 
+                    src="seal-tech-3d-logo.jpg" 
+                    alt="seal-tech-3d-logo"
+                    loading="lazy"
+                    width="180"
+                >
+            </picture>
+		</a>
+
+		<div class="flex items-center gap-10">
+			<a href={ERoutesNames.portfolio}> 
+                Portfolio
+            </a>
+
+			<a href="#contact"> 
+                Контакти
+            </a>
+		</div>
+	</nav>
+</header>
+
+<style lang="postcss">
+    a {
+        opacity: 0.75;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    div {
+        a {
+            letter-spacing: 0.12rem;
+            text-transform: uppercase;
+            position: relative;
+    
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 0;
+                height: 1px;
+                background-color: var(--accent);
+                transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+    
+            &:hover::after {
+                width: 100%;
+            }
+        }
+    }
+</style>
