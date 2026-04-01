@@ -1,35 +1,61 @@
 <section class="contact-section" id="contact">
 	<div>
-		<div class="about-label">Контакти</div>
-		<h2>ЗВ'ЯЖІТЬСЯ З НАМИ</h2>
+		<h2>
+			ЗВ'ЯЖІТЬСЯ З НАМИ
+		</h2>
+
 		<p class="contact-sub">
-			Розкажіть про ваш проект — і ми підберемо найкращий матеріал, технологію та строки.
-			Відповідаємо швидко.
+			Розкажіть про ваш проект — і ми допоможемо втілити вашу ідею в життя. 
+			Без зайвих питань, з особистим підходом.
 		</p>
+
 		<div class="contact-links">
 			<a href="tel:1234567890" class="contact-link">
 				<div class="contact-link-inner">
-					<div class="contact-icon">☎</div>
+					<div class="contact-icon">
+						☎
+					</div>
 					Подзвонити нам
 				</div>
-				<span class="contact-arrow">↗</span>
+
+				<span class="contact-arrow">
+					↗
+				</span>
+
 			</a>
+
 			<a href="https://t.me/yourusername" class="contact-link" target="_blank" rel="noopener">
 				<div class="contact-link-inner">
-					<div class="contact-icon">✈</div>
+					<div class="contact-icon">
+						✈
+					</div>
 					Telegram
 				</div>
-				<span class="contact-arrow">↗</span>
+
+				<span class="contact-arrow">
+					↗
+				</span>
 			</a>
 		</div>
 	</div>
+
 	<div class="contact-big" aria-hidden="true">
-		<div class="contact-big-text">FORM<br />3D</div>
+		<div class="contact-big-text">
+			Seal
+			<br/>
+			Tech
+			<br/>
+			3D
+		</div>
 	</div>
 </section>
 
 <style lang="postcss">
 	/* ── CONTACT ── */
+	h2 {
+		color: var(--accent);
+		/* font-size: 20px; */
+	}
 	.contact-section {
 		padding: 8rem 3rem;
 		background: var(--black);

@@ -1,34 +1,43 @@
 <section class="services">
 	<div class="services-header">
-		<h2>ПОСЛУГИ</h2>
+		<h2>
+			ПОСЛУГИ
+		</h2>
+
 		<span
 			style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gray);"
 		>
 			Що ми робимо
 		</span>
 	</div>
+
 	<div class="services-grid">
 		<div class="service-card">
-			<div class="service-num">01</div>
-			<div class="service-title">ПРОТОТИПУВАННЯ</div>
-			<p class="service-desc">
-				Швидке виготовлення прототипів для тестування форми, ергономіки та посадки деталей. Ідеально
-				для стартапів і інженерів.
-			</p>
-		</div>
-		<div class="service-card">
-			<div class="service-num">02</div>
-			<div class="service-title">СЕРІЙНИЙ ДРУК</div>
+			<div class="service-num">
+				01
+			</div>
+
+			<div class="service-title">
+				СЕРІЙНИЙ ДРУК
+			</div>
+
 			<p class="service-desc">
 				Малі та середні тиражі з однаковою якістю в кожній деталі. Гнучкі строки, конкурентні ціни.
 			</p>
 		</div>
+
 		<div class="service-card">
-			<div class="service-num">03</div>
-			<div class="service-title">CUSTOM ВИРОБИ</div>
+			<div class="service-num">
+				02
+			</div>
+
+			<div class="service-title">
+				CUSTOM ВИРОБИ
+			</div>
+
 			<p class="service-desc">
-				Декор, сувеніри, cosplay-реквізит, подарунки — будь-що за вашим ескізом або готовим
-				3D-файлом.
+				Декор, сувеніри, cosplay-реквізит, подарунки — допоможемо з ескізом або в створенні
+				3D-файлому для друку.
 			</p>
 		</div>
 	</div>
@@ -53,7 +62,7 @@
 
 	.services-grid {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		gap: 2px;
 	}
 
@@ -111,4 +120,5 @@
 		color: var(--gray);
 		font-weight: 300;
 	}
+
 </style>

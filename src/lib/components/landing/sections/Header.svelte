@@ -2,27 +2,11 @@
 	import { ERoutesNames } from "../../../../routes/routing-helpers";
 </script>
 
-<header class="fixed top-0 right-0 left-0 z-50 mix-blend-difference">
+<header class="fixed top-0 right-0 left-0 z-50 ">
+
 	<nav class="flex justify-between px-12">
 		<a href={ERoutesNames.root} >
-			<picture>
-                <source 
-                    srcset='seal-tech-3d-logo.webp' 
-                    type='image/webp'
-                >
-
-                <source 
-                    srcset='seal-tech-3d-logo.avif' 
-                    type='image/avif'
-                >
-
-                <img 
-                    src="seal-tech-3d-logo.jpg" 
-                    alt="seal-tech-3d-logo"
-                    loading="lazy"
-                    width="180"
-                >
-            </picture>
+            <img src="logo.png" width="180" loading="lazy" alt="logo">
 		</a>
 
 		<div class="flex items-center gap-10">

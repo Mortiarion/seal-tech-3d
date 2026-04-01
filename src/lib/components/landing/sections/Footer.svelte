@@ -1,13 +1,13 @@
 <footer>
-	<div class="footer-logo">
+	<!-- <div class="footer-logo">
 		<span class="logo-dot"></span>FORM3D
-	</div>
+	</div> -->
 
-	<span class="footer-copy">© 2026 SealTech3D. Всі права захищені.</span>
-	<nav class="footer-nav">
+	<span class="footer-copy mx-auto">© 2026 SealTech3D. Всі права захищені.</span>
+	<!-- <nav class="footer-nav">
 		<a href="/portfolio">Portfolio</a>
 		<a href="#contact">Контакти</a>
-	</nav>
+	</nav> -->
 </footer>
 
 <style lang="postcss">
