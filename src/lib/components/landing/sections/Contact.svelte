@@ -1,3 +1,8 @@
+<script lang='ts'>
+	import { ERoutesNames } from "../../../../routes/routing-helpers";
+
+</script>
+
 <section class="contact-section" id="contact">
 	<div>
 		<h2>
@@ -39,15 +44,18 @@
 		</div>
 	</div>
 
-	<div class="contact-big" aria-hidden="true">
-		<div class="contact-big-text">
+	<!-- <div class="contact-big" aria-hidden="true"> -->
+		<!-- <div class="contact-big-text">
 			Seal
 			<br/>
 			Tech
 			<br/>
 			3D
-		</div>
-	</div>
+		</div> -->
+		<a href={ERoutesNames.root} title="Головна">
+            <img src="logo.png" width="540" loading="lazy" alt="logo">
+		</a>
+	<!-- </div> -->
 </section>
 
 <style lang="postcss">
@@ -60,7 +68,7 @@
 		padding: 8rem 3rem;
 		background: var(--black);
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 6rem;
 		align-items: center;
 		border-top: 1px solid #222;

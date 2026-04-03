@@ -3,23 +3,39 @@
 :root {
 	--black: #0a0a0a;
 	--white: #f5f2ee;
-	--accent: #53a600;
 	--lime: #c8ff00;
 	--cyan: #00d4ff;
 	--mid: #141414;
 	--gray: #6b6864;
 	--border: #1e1e1e;
-	--orange: #ff8c5a;
 	--font-display: 'Bebas Neue', sans-serif;
 	--font-body: 'DM Sans', sans-serif;
+
+
+	--red: #e53704;
+	--orange: #fd6f00;
+	--yellow: #f0cd13;
+	--accent: #73d62b;
+	--green: #03a337;
+
 }
 
 html {
 	scroll-behavior: smooth;
+	/* scroll-snap-type: y mandatory; */
+	/* overflow-y: scroll; */
+	/* height: 100%; */
 }
 
 body {
 	background: var(--black);
 	color: var(--white);
 	font-family: var(--font-body);
+	/* height: 100%; */
+}
+
+section {
+	/* scroll-snap-align: start; */
+	/* height: 100svh; */
+	/* overflow: hidden; */
 }

@@ -420,7 +420,7 @@
   }
 </style>
 
-<header>
+<!-- <header>
   <nav>
     <a href="/" class="logo">
       <span class="logo-dot"></span>FORM3D
@@ -430,7 +430,7 @@
       <a href="/#contact">Контакти</a>
     </div>
   </nav>
-</header>
+</header> -->
 
 <main>
   <!-- PAGE HERO -->
@@ -481,31 +481,32 @@
               <circle cx="50" cy="50" r="6" fill="{item.color}" opacity=".5"/>
             </svg>
           {:else if item.shape === 'cube'}
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M50 15 L80 30 L80 70 L50 85 L20 70 L20 30 Z" stroke="{item.color}" stroke-width="1.5"/>
               <path d="M50 15 L50 85" stroke="{item.color}" stroke-width="1"/>
               <path d="M20 30 L80 30" stroke="{item.color}" stroke-width="1"/>
               <path d="M20 70 L50 55 L80 70" stroke="{item.color}" stroke-width="1"/>
               <path d="M50 55 L50 85" stroke="{item.color}" stroke-width="1"/>
-            </svg>
+            </svg> -->
+            <img src="kniga-shevshenko.png" alt="">
           {:else if item.shape === 'ring'}
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="50" cy="50" r="38" stroke="{item.color}" stroke-width="1.5"/>
               <circle cx="50" cy="50" r="24" stroke="{item.color}" stroke-width="1.5"/>
               <ellipse cx="50" cy="50" rx="38" ry="12" stroke="{item.color}" stroke-width="1" opacity=".5"/>
               <ellipse cx="50" cy="50" rx="24" ry="8" stroke="{item.color}" stroke-width="1" opacity=".5"/>
-            </svg>
+            </svg> -->
           {:else if item.shape === 'helix'}
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M35 85 Q65 70 35 55 Q5 40 35 25 Q65 10 35 -5" stroke="{item.color}" stroke-width="1.5" stroke-linecap="round"/>
               <path d="M65 85 Q35 70 65 55 Q95 40 65 25 Q35 10 65 -5" stroke="{item.color}" stroke-width="1.5" stroke-linecap="round"/>
               <line x1="35" y1="55" x2="65" y2="55" stroke="{item.color}" stroke-width="1" opacity=".6"/>
               <line x1="35" y1="25" x2="65" y2="25" stroke="{item.color}" stroke-width="1" opacity=".6"/>
               <line x1="35" y1="70" x2="65" y2="70" stroke="{item.color}" stroke-width="1" opacity=".6"/>
               <line x1="35" y1="40" x2="65" y2="40" stroke="{item.color}" stroke-width="1" opacity=".6"/>
-            </svg>
+            </svg> -->
           {:else if item.shape === 'gear'}
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="50" cy="50" r="18" stroke="{item.color}" stroke-width="1.5"/>
               {#each [0,30,60,90,120,150,180,210,240,270,300,330] as angle (angle)}
                 <rect
@@ -514,15 +515,16 @@
                   transform="rotate({angle} 50 50)"
                 />
               {/each}
-            </svg>
+            </svg> -->
+            <img src="heart-mria.png" alt="">
           {:else if item.shape === 'pyramid'}
-            <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M50 12 L85 80 L15 80 Z" stroke="{item.color}" stroke-width="1.5"/>
               <path d="M50 12 L85 80" stroke="{item.color}" stroke-width="1" opacity=".5"/>
               <path d="M50 12 L15 80" stroke="{item.color}" stroke-width="1" opacity=".5"/>
               <path d="M15 80 L85 80" stroke="{item.color}" stroke-width="1"/>
               <path d="M50 12 L50 80" stroke="{item.color}" stroke-width="1" opacity=".3"/>
-            </svg>
+            </svg> -->
           {/if}
         </div>
 

@@ -1,14 +1,14 @@
-<section class="services">
+<section class="services py-10 px-20">
 	<div class="services-header">
 		<h2>
 			ПОСЛУГИ
 		</h2>
 
-		<span
+		<!-- <span
 			style="font-size:0.75rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gray);"
 		>
 			Що ми робимо
-		</span>
+		</span> -->
 	</div>
 
 	<div class="services-grid">
@@ -45,8 +45,12 @@
 
 <style lang="postcss">
 	/* ── SERVICES ── */
+	h2 {
+		color: var(--orange);
+		font-size: 24px;
+	}
 	.services {
-		padding: 6rem 3rem;
+		/* padding: 6rem 5rem; */
 		background: var(--mid);
 		border-top: 1px solid #2a2a2a;
 	}
@@ -81,7 +85,7 @@
 		left: 0;
 		width: 0;
 		height: 2px;
-		background: var(--accent);
+		background: var(--orange);
 		transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 

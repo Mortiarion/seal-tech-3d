@@ -2,19 +2,22 @@
 	import { ERoutesNames } from "../../../../routes/routing-helpers";
 </script>
 
-<header class="fixed top-0 right-0 left-0 z-50 ">
-
-	<nav class="flex justify-between px-12">
-		<a href={ERoutesNames.root} >
+<header class="fixed top-0 right-0 left-0 z-50 py-5">
+	<nav class="flex justify-between px-20">
+		<a href={ERoutesNames.root} title="Головна">
             <img src="logo.png" width="180" loading="lazy" alt="logo">
 		</a>
 
 		<div class="flex items-center gap-10">
-			<a href={ERoutesNames.portfolio}> 
-                Portfolio
+			<a href="#portfolio" title='Перейти до секції'> 
+                Портфоліо
             </a>
 
-			<a href="#contact"> 
+            <a href="#about" title='Перейти до секції'> 
+                Про нас
+            </a>
+
+			<a href="#contact" title='Перейти до секції'> 
                 Контакти
             </a>
 		</div>
@@ -53,4 +56,5 @@
             }
         }
     }
+
 </style>

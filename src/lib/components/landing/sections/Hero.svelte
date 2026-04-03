@@ -2,32 +2,31 @@
     const layers = Array.from({ length: 20 }, (_, i) => i);
 </script>
 
-<section class="hero grid grid-cols-2 relative">
-	<div class="hero-left flex flex-col pt-56 pl-20 pb-12 relative">
+<section class="hero grid grid-cols-2">
+	<div class="hero-left flex flex-col justify-center pl-20 pt-56 pb-10">
 		<div class="hero-tag">
-			3D Друк · Місто героїв Гостомель
+			3D Друк 
 		</div>
 
 		<h1>
-			МИ
-			<span>ДРУКУ-</span>
-			ЄМО ІДЕЇ
+			Where 
+			<span>
+				ideas
+			</span>
+			become
+			<span>
+				real
+
+			</span>
 		</h1>
 
-		<p class="hero-desc">
-			Маленька команда з великими можливостями. Прототипи, деталі, 
-			унікальні вироби — від файлу до
-			готового об'єкта за лічені години.
-		</p>
-
 		<a href="#contact" class="hero-cta">
-			Замовити <span class="hero-cta-arrow">→</span>
+			Замовити 
+			<span class="hero-cta-arrow">
+				→
+			</span>
 		</a>
-
-		<!-- <div class="scroll-hint">
-			<span class="scroll-line"></span>
-			Гортай
-		</div> -->
+		
 	</div>
 
 	<div class="hero-right flex items-center justify-center relative">
@@ -40,16 +39,6 @@
                     <div class="layer"></div>
                 {/each}
                 
-			</div>
-		</div>
-
-		<div class="print-counter">
-			<div class="num">
-				500+
-			</div>
-
-			<div class="label">
-				Проектів виконано
 			</div>
 		</div>
 	</div>
@@ -82,12 +71,15 @@
 				font-size: clamp(5rem, 9vw, 10rem);
 				line-height: 0.9;
 				letter-spacing: -0.4rem;
-				color: var(--white);
 				margin-bottom: 2rem;
 		
-				> span {
-					color: var(--accent);
-					display: block;
+				span {
+					&:nth-child(1) {
+						color: var(--accent);
+					}
+					&:nth-child(2) {
+						color: var(--orange);
+					}
 				}
 			}
 
@@ -127,38 +119,6 @@
 					transform: translateX(4px);
 				}
 			}
-
-			/* .scroll-hint {
-				position: absolute;
-				bottom: 2.5rem;
-				left: 3rem;
-				display: flex;
-				align-items: center;
-				gap: 1rem;
-				font-size: 0.7rem;
-				letter-spacing: 0.15em;
-				text-transform: uppercase;
-				color: var(--gray);
-
-				.scroll-line {
-					width: 40px;
-					height: 1px;
-					background: var(--gray);
-					position: relative;
-					overflow: hidden;
-
-					&::after {
-						content: '';
-						position: absolute;
-						top: 0;
-						left: -100%;
-						width: 100%;
-						height: 100%;
-						background: var(--accent);
-						animation: scrollSlide 1.5s ease-in-out infinite;
-					} 
-				}
-			} */
 		}
 
 		.hero-right {
