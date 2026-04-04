@@ -89,11 +89,4 @@
 		color: var(--accent);
 	}
 
-	h2 {
-		font-family: var(--font-display);
-		/* color: var(--red); */
-		font-size: 24px;
-	}
-
-	
 </style>

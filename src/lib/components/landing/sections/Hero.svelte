@@ -1,12 +1,14 @@
 <script lang='ts'>
+	import Arrow from "$lib/components/icons/Arrow.svelte";
+
     const layers = Array.from({ length: 20 }, (_, i) => i);
 </script>
 
 <section class="hero grid grid-cols-2">
 	<div class="hero-left flex flex-col justify-center pl-20 pt-56 pb-10">
-		<div class="hero-tag">
+		<h2>
 			3D Друк 
-		</div>
+		</h2>
 
 		<h1>
 			Where 
@@ -16,14 +18,13 @@
 			become
 			<span>
 				real
-
 			</span>
 		</h1>
 
-		<a href="#contact" class="hero-cta">
+		<a href="#contact" class="main-link">
 			Замовити 
-			<span class="hero-cta-arrow">
-				→
+			<span>
+				<Arrow />
 			</span>
 		</a>
 		
@@ -47,28 +48,9 @@
 <style lang="postcss">
 	.hero {
 		.hero-left {
-			.hero-tag {
-				font-size: 0.75rem;
-				letter-spacing: 0.3rem;
-				text-transform: uppercase;
-				color: var(--accent);
-				font-weight: 600;
-				margin-bottom: 1.5rem;
-				display: flex;
-				align-items: center;
-				gap: 0.8rem;
-		
-				&::before {
-					content: '';
-					width: 2rem;
-					height: 1px;
-					background: var(--accent);
-				}
-			}
-
 			h1 {
 				font-family: var(--font-display);
-				font-size: clamp(5rem, 9vw, 10rem);
+				font-size: 10rem;
 				line-height: 0.9;
 				letter-spacing: -0.4rem;
 				margin-bottom: 2rem;
@@ -80,43 +62,6 @@
 					&:nth-child(2) {
 						color: var(--orange);
 					}
-				}
-			}
-
-			.hero-desc {
-				line-height: 1.7;
-				color: var(--gray);
-				max-width: 23.75rem;
-				font-weight: 300;
-				margin-bottom: 3rem;
-			}
-		
-			.hero-cta {
-				display: flex;
-				gap: 1rem;
-				font-weight: 600;
-				letter-spacing: 0.2rem;
-				text-transform: uppercase;
-				color: var(--black);
-				background-color: var(--white);
-				padding: 1rem 2rem;
-				transition:
-					background-color 0.2s,
-					color 0.2s;
-				width: fit-content;
-		
-				&:hover {
-					background: var(--accent);
-					color: var(--white);
-				}
-		
-				.hero-cta-arrow {
-					transition: transform 0.2s;
-					margin-top: -0.1rem;
-				}
-		
-				&:hover .hero-cta-arrow {
-					transform: translateX(4px);
 				}
 			}
 		}
@@ -226,32 +171,7 @@
 					}
 				}
 			}
-
-			.print-counter {
-				position: absolute;
-				bottom: 5rem;
-				right: 3rem;
-				text-align: right;
-
-				& .num {
-					font-family: var(--font-display);
-					font-size: 5rem;
-					line-height: 1;
-					color: var(--accent);
-				}
-			
-				& .label {
-					font-size: 0.7rem;
-					letter-spacing: 0.15em;
-					text-transform: uppercase;
-					color: var(--gray);
-				}
-			}
 		}
-	}
-
-	@keyframes scrollSlide {
-		to { left: 100%; }
 	}
 
 	@keyframes buildUp {

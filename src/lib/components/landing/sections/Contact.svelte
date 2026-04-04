@@ -1,25 +1,24 @@
 <script lang='ts'>
 	import { ERoutesNames } from "../../../../routes/routing-helpers";
-
 </script>
 
-<section class="contact-section" id="contact">
+<section class="contact" id="contact">
 	<div>
 		<h2>
 			ЗВ'ЯЖІТЬСЯ З НАМИ
 		</h2>
 
-		<p class="contact-sub">
+		<p>
 			Розкажіть про ваш проект — і ми допоможемо втілити вашу ідею в життя. 
 			Без зайвих питань, з особистим підходом.
 		</p>
 
 		<div class="contact-links">
-			<a href="tel:1234567890" class="contact-link">
+			<a href="tel:+380668038198" class="contact-link" title="">
 				<div class="contact-link-inner">
-					<div class="contact-icon">
+					<span class="contact-icon">
 						☎
-					</div>
+					</span>
 					Подзвонити нам
 				</div>
 
@@ -29,11 +28,11 @@
 
 			</a>
 
-			<a href="https://t.me/yourusername" class="contact-link" target="_blank" rel="noopener">
+			<a href="https://t.me/SealTech3D" class="contact-link" target="_blank" rel="noopener">
 				<div class="contact-link-inner">
-					<div class="contact-icon">
+					<span class="contact-icon">
 						✈
-					</div>
+					</span>
 					Telegram
 				</div>
 
@@ -43,30 +42,15 @@
 			</a>
 		</div>
 	</div>
-
-	<!-- <div class="contact-big" aria-hidden="true"> -->
-		<!-- <div class="contact-big-text">
-			Seal
-			<br/>
-			Tech
-			<br/>
-			3D
-		</div> -->
-		<a href={ERoutesNames.root} title="Головна">
-            <img src="logo.png" width="540" loading="lazy" alt="logo">
-		</a>
-	<!-- </div> -->
+	
+	<a href={ERoutesNames.root} class="flex justify-center" title="На верх">
+		<img src="logo.png" width="440" loading="lazy" alt="logo">
+	</a>
 </section>
 
 <style lang="postcss">
-	/* ── CONTACT ── */
-	h2 {
-		color: var(--accent);
-		/* font-size: 20px; */
-	}
-	.contact-section {
-		padding: 8rem 3rem;
-		background: var(--black);
+	.contact {
+		padding: 3rem 5rem;
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 6rem;
@@ -74,15 +58,8 @@
 		border-top: 1px solid #222;
 	}
 
-	.contact-section h2 {
-		margin-bottom: 1rem;
-	}
-
-	.contact-sub {
-		font-size: 1rem;
+	p {
 		color: var(--gray);
-		font-weight: 300;
-		line-height: 1.7;
 		margin-bottom: 3rem;
 	}
 
@@ -98,19 +75,17 @@
 		justify-content: space-between;
 		padding: 1.5rem 2rem;
 		background: var(--mid);
-		text-decoration: none;
-		color: var(--white);
 		transition:
-			background 0.2s,
-			color 0.2s;
+			background 0.3s,
+			color 0.3s;
 		font-size: 0.9rem;
 		font-weight: 500;
 		letter-spacing: 0.05em;
-	}
 
-	.contact-link:hover {
-		background: var(--accent);
-		color: var(--white);
+		&:hover {
+			background: var(--accent);
+			color: var(--white);
+		}
 	}
 
 	.contact-link-inner {
@@ -129,31 +104,18 @@
 		font-size: 0.9rem;
 		transition: border-color 0.2s;
 	}
-
-	.contact-link:hover .contact-icon {
-		border-color: rgba(255, 255, 255, 0.3);
-	}
-
+	
 	.contact-arrow {
 		font-size: 1rem;
 		transition: transform 0.2s;
 	}
 
+	.contact-link:hover .contact-icon {
+		border-color: rgba(255, 255, 255, 0.3);
+	}
+
 	.contact-link:hover .contact-arrow {
 		transform: translate(3px, -3px);
 	}
-
-	.contact-big {
-		text-align: center;
-	}
-
-	.contact-big-text {
-		font-family: var(--font-display);
-		font-size: clamp(4rem, 8vw, 9rem);
-		line-height: 0.9;
-		color: var(--white);
-		opacity: 0.05;
-		user-select: none;
-		letter-spacing: -0.02em;
-	}
+	
 </style>

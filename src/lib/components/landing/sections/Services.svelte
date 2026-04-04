@@ -44,11 +44,7 @@
 </section>
 
 <style lang="postcss">
-	/* ── SERVICES ── */
-	h2 {
-		color: var(--orange);
-		font-size: 24px;
-	}
+	
 	.services {
 		/* padding: 6rem 5rem; */
 		background: var(--mid);

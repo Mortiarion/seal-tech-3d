@@ -5,7 +5,7 @@
 	import Services from '$lib/components/landing/sections/Services.svelte';
 	import Contact from '$lib/components/landing/sections/Contact.svelte';
 	import Portfolio from '$lib/components/landing/sections/Portfolio.svelte';
-	// import Footer from '$lib/components/landing/sections/Footer.svelte';
+	import Footer from '$lib/components/landing/sections/Footer.svelte';
 </script>
 
 <svelte:head>
@@ -33,4 +33,4 @@
 	<Contact />
 </main>
 
-<!-- <Footer /> -->
+<Footer />

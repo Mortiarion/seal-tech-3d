@@ -11,13 +11,11 @@
 	--font-display: 'Bebas Neue', sans-serif;
 	--font-body: 'DM Sans', sans-serif;
 
-
 	--red: #e53704;
 	--orange: #fd6f00;
 	--yellow: #f0cd13;
 	--accent: #73d62b;
 	--green: #03a337;
-
 }
 
 html {
@@ -38,4 +36,53 @@ section {
 	/* scroll-snap-align: start; */
 	/* height: 100svh; */
 	/* overflow: hidden; */
+}
+
+h2 {
+	font-size: 24px;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 600;
+	margin-bottom: 1.5rem;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	&::before {
+		content: '';
+		width: 2rem;
+		height: 1px;
+		background: var(--accent);
+	}
+}
+
+.main-link {
+	display: flex;
+	gap: 1rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	color: var(--black);
+	background-color: var(--white);
+	padding: 1rem 2rem;
+	transition:
+		background-color 0.3s,
+		color 0.3s;
+	width: fit-content;
+
+	&:hover {
+		background-color: var(--accent);
+		color: var(--white);
+	}
+
+	span {
+		transition: transform 0.2s;
+		display: flex;
+		align-items: center;
+	}
+
+	&:hover span {
+		transform: translateX(4px);
+	}
 }
