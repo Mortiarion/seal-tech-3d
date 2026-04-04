@@ -259,6 +259,7 @@
 						border: 1px solid var(--border);
 						outline: 2px solid rgba(255, 255, 255, 0.07);
 						outline-offset: 8px;
+						isolation: isolate;
 					}
 					/* 01 — tall portrait, center, full height */
 					&.pi-center {
@@ -266,7 +267,7 @@
 						top: 0;
 						width: 46%;
 						height: 100%;
-						z-index: 1;
+						/* z-index: 1; */
 					}
 				
 					/* 02 — square, left side, vertically centered */
@@ -275,7 +276,7 @@
 						top: 20%;
 						width: 42%;
 						height: 62%;
-						z-index: 2;
+						/* z-index: 2; */
 					}
 				
 					/* 03 — right column, upper half */
@@ -284,7 +285,7 @@
 						top: -10%;
 						width: 30%;
 						height: 58%;
-						z-index: 3;
+						/* z-index: 3; */
 					}
 				
 					/* 04 — right column, lower half, shifted left to overlap center */
@@ -293,7 +294,7 @@
 						bottom: -12%;
 						width: 30%;
 						height: 68%;
-						z-index: 2;
+						/* z-index: 2; */
 					}
 
 					.item-name {

@@ -13,13 +13,19 @@
 			Без зайвих питань, з особистим підходом.
 		</p>
 
+		
 		<div class="contact-links">
+			
+
 			<a href="tel:+380668038198" class="contact-link" title="">
 				<div class="contact-link-inner">
 					<span class="contact-icon">
-						☎
+						☎ 
 					</span>
-					Подзвонити нам
+					Телефон
+					<i>
+						+380668038198
+					</i>
 				</div>
 
 				<span class="contact-arrow">
@@ -33,7 +39,26 @@
 					<span class="contact-icon">
 						✈
 					</span>
-					Telegram
+					Telegram 
+					<i>
+						@SealTech3D
+					</i>
+				</div>
+
+				<span class="contact-arrow">
+					↗
+				</span>
+			</a>
+
+			<a href="mailto:sealtech3d@gmail.com" class="contact-link" title="">
+				<div class="contact-link-inner">
+					<span class="contact-icon">
+						✉
+					</span>
+
+					<i>
+						sealtech3d@gmail.com
+					</i>
 				</div>
 
 				<span class="contact-arrow">
@@ -58,6 +83,10 @@
 		border-top: 1px solid #222;
 	}
 
+	i {
+		color: var(--orange);
+	}
+
 	p {
 		color: var(--gray);
 		margin-bottom: 3rem;
@@ -67,20 +96,22 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1px;
+
 	}
 
 	.contact-link {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 1.5rem 2rem;
+		padding: 0.5rem 1rem;
 		background: var(--mid);
 		transition:
 			background 0.3s,
 			color 0.3s;
 		font-size: 0.9rem;
-		font-weight: 500;
-		letter-spacing: 0.05em;
+		font-weight: 600;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
 
 		&:hover {
 			background: var(--accent);
