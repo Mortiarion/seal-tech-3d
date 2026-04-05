@@ -1,4 +1,4 @@
-<section class="services py-10 px-20">
+<section class="services py-10 px-20" id="services">
 	<div class="services-header">
 		<h2>
 			ПОСЛУГИ

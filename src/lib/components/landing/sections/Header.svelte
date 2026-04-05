@@ -29,15 +29,19 @@
 		</a>
 
 		<div class="flex items-center gap-10">
-			<a href="#portfolio" title='Перейти до секції'> 
-                Портфоліо
-            </a>
-
-            <a href="#about" title='Перейти до секції'> 
+			<a href={ERoutesNames.about} title='Перейти до секції'> 
                 Про нас
             </a>
 
-			<a href="#contact" title='Перейти до секції'> 
+            <a href={ERoutesNames.services} title='Перейти до секції'> 
+                Послуги
+            </a>
+            
+			<a href={ERoutesNames.portfolio} title='Перейти до секції'> 
+                Портфоліо
+            </a>
+
+			<a href={ERoutesNames.contact} title='Перейти до секції'> 
                 Контакти
             </a>
 		</div>

@@ -21,7 +21,7 @@
 				Ми пишаємося кожним проектом, який ми реалізували, і раді поділитися деякими з них з вами.
 			</p>
 
-			<a href={ERoutesNames.portfolio} class="main-link">
+			<a href={ERoutesNames.portfolioPage} class="main-link">
 				Переглянути все
 				<span>
 					<Arrow />
