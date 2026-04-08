@@ -3,84 +3,91 @@
 </script>
 
 <section class="contact" id="contact">
-	<div>
-		<h2>
-			ЗВ'ЯЖІТЬСЯ З НАМИ
-		</h2>
-
-		<p>
-			Розкажіть про ваш проект — і ми допоможемо втілити вашу ідею в життя. 
-			Без зайвих питань, з особистим підходом.
-		</p>
-
-		
-		<div class="contact-links">
+	<div class="container p-5 lg:p-10 xl:p-20 mx-auto grid lg:grid-cols-2 gap-20">
+		<div class=''>
+			<h2>
+				ЗВ'ЯЖІТЬСЯ З НАМИ
+			</h2>
+	
+			<p>
+				Розкажіть про ваш проект — і ми допоможемо втілити вашу ідею в життя. 
+				Без зайвих питань, з особистим підходом.
+			</p>
+	
 			
-
-			<a href="tel:+380668038198" class="contact-link" title="">
-				<div class="contact-link-inner">
-					<span class="contact-icon">
-						☎ 
+			<div class="contact-links">
+	
+				<a href="tel:+380668038198" class="contact-link" title="">
+					<div class="contact-link-inner truncate">
+						<span class="contact-icon">
+							☎ 
+						</span>
+						Телефон
+						<i>
+							+380668038198
+						</i>
+					</div>
+	
+					<span class="contact-arrow">
+						↗
 					</span>
-					Телефон
-					<i>
-						+380668038198
-					</i>
-				</div>
-
-				<span class="contact-arrow">
-					↗
-				</span>
-
-			</a>
-
-			<a href="https://t.me/SealTech3D" class="contact-link" target="_blank" rel="noopener">
-				<div class="contact-link-inner">
-					<span class="contact-icon">
-						✈
+	
+				</a>
+	
+				<a href="https://t.me/SealTech3D" class="contact-link" target="_blank" rel="noopener">
+					<div class="contact-link-inner truncate">
+						<span class="contact-icon">
+							✈
+						</span>
+						Telegram 
+						<i>
+							@SealTech3D
+						</i>
+					</div>
+	
+					<span class="contact-arrow">
+						↗
 					</span>
-					Telegram 
-					<i>
-						@SealTech3D
-					</i>
-				</div>
-
-				<span class="contact-arrow">
-					↗
-				</span>
-			</a>
-
-			<a href="mailto:sealtech3d@gmail.com" class="contact-link" title="">
-				<div class="contact-link-inner">
-					<span class="contact-icon">
-						✉
+				</a>
+	
+				<a href="mailto:sealtech3d@gmail.com" class="contact-link" title="">
+					<div class="contact-link-inner truncate">
+						<span class="contact-icon">
+							✉
+						</span>
+	
+						<i>
+							sealtech3d@gmail.com
+						</i>
+					</div>
+	
+					<span class="contact-arrow">
+						↗
 					</span>
+				</a>
+			</div>
 
-					<i>
-						sealtech3d@gmail.com
-					</i>
-				</div>
-
-				<span class="contact-arrow">
-					↗
-				</span>
-			</a>
 		</div>
+
+		<a href={ERoutesNames.root} class="flex justify-center" title="На верх">
+			<img src="logo.png" width="440" loading="lazy" alt="logo">
+		</a>
 	</div>
 	
-	<a href={ERoutesNames.root} class="flex justify-center" title="На верх">
-		<img src="logo.png" width="440" loading="lazy" alt="logo">
-	</a>
 </section>
 
 <style lang="postcss">
 	.contact {
-		padding: 3rem 5rem;
-		display: grid;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-		gap: 6rem;
-		align-items: center;
+		/* padding: 3rem 5rem; */
+		/* display: grid; */
+		/* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+		/* gap: 6rem; */
+		/* align-items: center; */
 		border-top: 1px solid #222;
+
+		> div {
+			
+		}
 	}
 
 	i {
@@ -108,7 +115,7 @@
 		transition:
 			background 0.3s,
 			color 0.3s;
-		font-size: 0.9rem;
+		font-size: 0.6rem;
 		font-weight: 600;
 		letter-spacing: 0.2em;
 		text-transform: uppercase;

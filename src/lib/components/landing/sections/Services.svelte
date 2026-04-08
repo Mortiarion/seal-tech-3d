@@ -1,38 +1,41 @@
-<section class="services py-10 px-20" id="services">
-	<div class="services-header">
-		<h2>
-			ПОСЛУГИ
-		</h2>
-	</div>
+<section class="services" id="services">
+	<div class="container mx-auto p-5 lg:p-10 xl:p-20">
 
-	<div class="services-grid">
-		<div class="service-card">
-			<div class="service-num">
-				01
-			</div>
-
-			<div class="service-title">
-				СЕРІЙНИЙ ДРУК
-			</div>
-
-			<p class="service-desc">
-				Малі та середні тиражі з однаковою якістю в кожній деталі. Гнучкі строки, конкурентні ціни.
-			</p>
+		<div class="services-header">
+			<h2>
+				ПОСЛУГИ
+			</h2>
 		</div>
-
-		<div class="service-card">
-			<div class="service-num">
-				02
+	
+		<div class="services-grid md:grid-cols-2">
+			<div class="service-card">
+				<div class="service-num">
+					01
+				</div>
+	
+				<div class="service-title">
+					СЕРІЙНИЙ ДРУК
+				</div>
+	
+				<p class="service-desc">
+					Малі та середні тиражі з однаковою якістю в кожній деталі. Гнучкі строки, конкурентні ціни.
+				</p>
 			</div>
-
-			<div class="service-title">
-				CUSTOM ВИРОБИ
+	
+			<div class="service-card">
+				<div class="service-num">
+					02
+				</div>
+	
+				<div class="service-title">
+					CUSTOM ВИРОБИ
+				</div>
+	
+				<p class="service-desc">
+					Декор, сувеніри, cosplay-реквізит, подарунки — допоможемо з ескізом або в створенні
+					3D-файлому для друку.
+				</p>
 			</div>
-
-			<p class="service-desc">
-				Декор, сувеніри, cosplay-реквізит, подарунки — допоможемо з ескізом або в створенні
-				3D-файлому для друку.
-			</p>
 		</div>
 	</div>
 </section>
@@ -55,7 +58,7 @@
 
 	.services-grid {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		/* grid-template-columns: repeat(2, minmax(0, 1fr)); */
 		gap: 2px;
 	}
 

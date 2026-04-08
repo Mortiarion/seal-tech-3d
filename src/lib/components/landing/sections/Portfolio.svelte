@@ -3,78 +3,80 @@
 	import { ERoutesNames } from "../../../../routes/routing-helpers";
 </script>
 
-<section class="portfolio px-20 py-25" id='portfolio'>
-	<div class="portfolio-inner">
-		<!-- LEFT: text block -->
-		<div class="portfolio-left">
-			<h2 class="portfolio-label">
-				Портфоліо
-			</h2>
-
-			<h3 class="portfolio-title">
-				НАШІ
-				<br />
-				РОБОТИ
-			</h3>
-
-			<p class="portfolio-desc">
-				Ми пишаємося кожним проектом, який ми реалізували, і раді поділитися деякими з них з вами.
-			</p>
-
-			<a href={ERoutesNames.portfolioPage} class="main-link">
-				Переглянути все
-				<span>
-					<Arrow />
-				</span>
-
-			</a>
-		</div>
-
-		<!-- RIGHT: 4-image collage -->
-		<div class="portfolio-collage">
-			<!-- 01: tall vertical center -->
-			<div class="portfolio-item pi-center">
-				<div class="portfolio-img-wrap">
-					<img src="/portfolio-img/heart-mria.png" alt="heart-mria" loading="lazy" />
-				</div>
-
-				<p class="item-name">
-					Годинник з підсвіткою "Серце Мрії" 
+<section class="portfolio" id='portfolio'>
+	<div class="container p-5 lg:p-10 xl:p-20 mx-auto">
+		<div class="portfolio-inner md:grid-cols-2">
+			<!-- LEFT: text block -->
+			<div class="portfolio-left">
+				<h2 class="portfolio-label">
+					Портфоліо
+				</h2>
+	
+				<h3 class="portfolio-title">
+					НАШІ
+					<br />
+					РОБОТИ
+				</h3>
+	
+				<p class="portfolio-desc">
+					Ми пишаємося кожним проектом, який ми реалізували, і раді поділитися деякими з них з вами.
 				</p>
+	
+				<a href={ERoutesNames.portfolioPage} class="main-link">
+					Переглянути все
+					<span>
+						<Arrow />
+					</span>
+	
+				</a>
 			</div>
-
-			<!-- 02: square left, vertically centered -->
-			<div class="portfolio-item pi-left">
-				<div class="portfolio-img-wrap">
-					<img src="/portfolio-img/kniga-shevshenko.png" alt="kniga-shevshenko" loading="lazy" />
+	
+			<!-- RIGHT: 4-image collage -->
+			<div class="portfolio-collage hidden lg:block">
+				<!-- 01: tall vertical center -->
+				<div class="portfolio-item pi-center">
+					<div class="portfolio-img-wrap">
+						<img src="/portfolio-img/heart-mria.png" alt="heart-mria" loading="lazy" />
+					</div>
+	
+					<p class="item-name">
+						Годинник з підсвіткою "Серце Мрії" 
+					</p>
 				</div>
-
-				<p class="item-name">
-					Нагорода до конкурсу Шевченка
-				</p>
-			</div>
-
-			<!-- 03: right top -->
-			<div class="portfolio-item pi-right-top">
-				<div class="portfolio-img-wrap">
-					<img src="/portfolio-img/basket.jpg" alt="motanka" loading="lazy" />
+	
+				<!-- 02: square left, vertically centered -->
+				<div class="portfolio-item pi-left">
+					<div class="portfolio-img-wrap">
+						<img src="/portfolio-img/kniga-shevshenko.png" alt="kniga-shevshenko" loading="lazy" />
+					</div>
+	
+					<p class="item-name">
+						Нагорода до конкурсу Шевченка
+					</p>
 				</div>
-
-				<p class="item-name">
-					Дизайнерска крафтова сумка
-				</p>
-			</div>
-
-			<!-- 04: right bottom, overlaps 03 and center -->
-			<div class="portfolio-item pi-right-bottom">
-				<div class="portfolio-img-wrap">
-					<img src="/portfolio-img/motanka.jpg" alt="Project 4" loading="lazy" />
+	
+				<!-- 03: right top -->
+				<div class="portfolio-item pi-right-top">
+					<div class="portfolio-img-wrap">
+						<img src="/portfolio-img/basket.jpg" alt="motanka" loading="lazy" />
+					</div>
+	
+					<p class="item-name">
+						Дизайнерска крафтова сумка
+					</p>
 				</div>
-
-				<p class="item-name">
-					Берегиня-мотанка
-				</p>
-
+	
+				<!-- 04: right bottom, overlaps 03 and center -->
+				<div class="portfolio-item pi-right-bottom">
+					<div class="portfolio-img-wrap">
+						<img src="/portfolio-img/motanka.jpg" alt="Project 4" loading="lazy" />
+					</div>
+	
+					<p class="item-name">
+						Берегиня-мотанка
+					</p>
+	
+				</div>
 			</div>
 		</div>
 	</div>
@@ -112,7 +114,7 @@
 			position: relative;
 			z-index: 1;
 			display: grid;
-			grid-template-columns: repeat(2, minmax(0, 1fr));
+			/* grid-template-columns: repeat(2, minmax(0, 1fr)); */
 			gap: 5rem;
 			align-items: center;
 	
@@ -140,7 +142,7 @@
 			
 				.portfolio-title {
 					font-family: var(--font-display);
-					font-size: 6rem;
+					font-size: 3rem;
 					line-height: 1;
 					letter-spacing: 0.2rem;
 					margin-bottom: 2rem;
@@ -306,6 +308,22 @@
 					}
 				}
 			}
+		}
+	}
+
+	@media (width >= 48rem) {
+		.portfolio {
+			.portfolio-inner {
+				.portfolio-left {
+					.portfolio-title {
+						font-size: 6rem;
+					}
+				}
+			}
+		}
+
+		h3 {
+			font-size: 6rem;
 		}
 	}
 

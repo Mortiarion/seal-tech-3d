@@ -2,8 +2,8 @@
 	import Hero from '$lib/components/landing/sections/Hero.svelte';
 	import About from '$lib/components/landing/sections/About.svelte';
 	import Services from '$lib/components/landing/sections/Services.svelte';
-	import Contact from '$lib/components/landing/sections/Contact.svelte';
 	import Portfolio from '$lib/components/landing/sections/Portfolio.svelte';
+	import Contact from '$lib/components/landing/sections/Contact.svelte';
 </script>
 
 <svelte:head>
@@ -12,7 +12,7 @@
 	</title>
 </svelte:head>
 
-<main>
+<main class="overflow-hidden">
 	<Hero />
 
 	<About />

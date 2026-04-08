@@ -4,42 +4,50 @@
     const layers = Array.from({ length: 20 }, (_, i) => i);
 </script>
 
-<section class="hero grid grid-cols-2">
-	<div class="hero-left flex flex-col justify-center pl-20 pt-56 pb-10">
-		<h2>
-			3D Друк 
-		</h2>
+<section class="hero container mx-auto pl-5 lg:pl-10 xl:pl-20 relative ">
+	<div class="grid grid-cols-2 ">
 
-		<h1>
-			Where 
-			<span>
-				ideas
-			</span>
-			become
-			<span>
-				real
-			</span>
-		</h1>
-
-		<a href="#contact" class="main-link">
-			Замовити 
-			<span>
-				<Arrow />
-			</span>
-		</a>
-		
-	</div>
-
-	<div class="hero-right flex items-center justify-center relative">
-		<div class="hero-right-bg"></div>
-
-		<div class="hero-visual">
-			<div class="layer-stack absolute inset-0 flex flex-col-reverse items-center justify-center gap-1">
-				
-                {#each layers as i (i)}
-                    <div class="layer"></div>
-                {/each}
-                
+		<!-- pl-20 pt-56 pb-10 -->
+		<div class="hero-left flex flex-col justify-center pt-30 md:pt-56 pb-5 ">
+			<h2>
+				3D Друк 
+			</h2>
+	
+			<h1>
+				Where 
+				<span>
+					ideas <br />
+				</span>
+				become
+				<span>
+					real <br />
+				</span>
+			</h1>
+	
+			<a href="#contact" 
+				class="main-link" 
+				title="Перейти до секції контактів" 
+				aria-label="Перейти до секції контактів"
+			>
+				Замовити 
+				<span>
+					<Arrow />
+				</span>
+			</a>
+			
+		</div>
+	
+		<div class="hero-right flex items-center justify-center relative ">
+			<!-- <div class="hero-right-bg"></div> -->
+	
+			<div class="hero-visual hidden md:block md:mt-[40%]">
+				<div class="layer-stack absolute inset-0 flex flex-col-reverse items-center justify-center gap-1">
+					
+					{#each layers as i (i)}
+						<div class="layer"></div>
+					{/each}
+					
+				</div>
 			</div>
 		</div>
 	</div>
@@ -47,12 +55,28 @@
 
 <style lang="postcss">
 	.hero {
+
+		&::before {
+			position: absolute;
+			z-index: -23;
+			/* right: 100%; */
+			left: 99%;
+			display: flex;
+			flex: 1;
+			content: '';
+			background-color: var(--mid);
+			/* clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); */
+			width: 100%;
+			height: 100%;
+
+		}
 		.hero-left {
 			h1 {
 				font-family: var(--font-display);
-				font-size: 10rem;
+				/* font-size: 10rem; */
+				font-size: 3rem;
 				line-height: 0.9;
-				letter-spacing: -0.4rem;
+				/* letter-spacing: -0.4rem; */
 				margin-bottom: 2rem;
 		
 				span {
@@ -67,11 +91,26 @@
 		}
 
 		.hero-right {
-			.hero-right-bg {
+			position: relative;
+
+			&::after {
 				position: absolute;
-				inset: 0;
+				content: '';
+				z-index: -1;
+				right: 0;
+				left: 0;
+				/* inset: 0; */
+				width: 100%;
+				height: 100%;
 				background-color: var(--mid);
 				clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+			}
+			.hero-right-bg {
+				/* position: absolute;
+				z-index: -1;
+				inset: 0;
+				background-color: var(--mid);
+				clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%); */
 			}
 
 			.hero-visual {
@@ -186,4 +225,25 @@
 		}
 	}
 
+	@media (width >= 48rem) {
+		.hero {
+			.hero-left {
+
+				h1 {
+					font-size: 6rem;
+					width: auto;
+				}
+			}
+		}
+	}
+
+	@media (width >= 64rem) {
+		.hero {
+			.hero-left {
+				h1 {
+					font-size: 8rem;
+				}
+			}
+		}
+	}
 </style>

@@ -8,74 +8,185 @@
 </svelte:head>
 
 <main>
-	<!-- PAGE HERO -->
-	<div class="page-hero">
-		<h1>
-			НА<span>ШІ</span>
-			<br />
-			<span>РО</span>БОТИ
-		</h1>
-
-		<div class="page-hero-meta">
-			<div class="count">
-				<strong> 1 </strong> / 1
-			</div>
-
-			<p>проектів у портфоліо</p>
-		</div>
-	</div>
-
-	<!-- GRID -->
-	<div class="portfolio-grid">
-		<article class="portfolio-card" style="animation-delay:{1}ms">
-			<!-- color accent bar -->
-			<div class="card-accent" style="background:#ff4d1c"></div>
-
-			<img src="/portfolio-img/heart-mria.png" alt="heart mria" />
-
-			<!-- INFO -->
-			<div class="card-info">
-				<div class="card-cat" style="color:#ff4d1c">// Custom</div>
-
-				<div class="card-title">Годинник з підсвіткою "Серце Мрії"</div>
-			</div>
-		</article>
-
-		<article class="portfolio-card" style="animation-delay:{1}ms">
-			<!-- color accent bar -->
-			<div class="card-accent" style="background:#73d62b"></div>
-
-			<img src="/portfolio-img/heart-mria.png" alt="heart mria" />
-		</article>
-
-		<article class="portfolio-card" style="animation-delay:{1}ms">
-			<!-- color accent bar -->
-			<div class="card-accent" style="background:#73d62b"></div>
-
-			<img src="/portfolio-img/heart-mria.png" alt="heart mria" />
-		</article>
-	</div>
-
-	<!-- CTA STRIP -->
-	<div class="cta-strip">
-		<div>
-			<h3>
-				МАЄ БУТИ
+	<section class="container mx-auto px-5 md:px-10 xl:px-20 pt-30 md:pt-56 pb-10">
+		<!-- PAGE HERO -->
+		<div class="page-hero">
+			<h1>
+				НА<span>ШІ</span>
 				<br />
-				ВАШЕ ФОТО?
-			</h3>
-
-			<p>Реалізуємо проект будь-якої складності — від ескізу до готового виробу.</p>
+				<span>РО</span>БОТИ
+			</h1>
+	
+			<div class="page-hero-meta">
+				<div class="count">
+					<strong> 4 </strong> / 4
+				</div>
+	
+				<p>проектів у портфоліо</p>
+			</div>
 		</div>
-
-		<a href={ERoutesNames.contact} class='main-link'> 
-      Замовити проект 
-      <span>
-        <Arrow />
-      </span>
-    </a>
-
-	</div>
+	
+		<!-- GRID -->
+		<div class="portfolio-grid">
+			<article class="portfolio-card">
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#ff4d1c"></div>
+	
+				<img src="/portfolio-img/heart-mria.png" alt="heart mria" />
+	
+				<!-- INFO -->
+				<div class="card-info">
+					<div class="card-cat" style="color:#ff4d1c">
+						// Custom
+					</div>
+	
+					<div class="card-title">
+						Годинник з підсвіткою "Серце Мрії"
+					</div>
+				</div>
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/heart-mria.png" alt="heart mria" />
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/heart-mria.png" alt="heart mria" />
+			</article>
+		</div>
+		<!-- GRID -->
+		<div class="portfolio-grid">
+			<article class="portfolio-card">
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#ff4d1c"></div>
+	
+				<img src="/portfolio-img/kniga-shevshenko.png" alt="kniga shevshenko" />
+	
+				<!-- INFO -->
+				<div class="card-info">
+					<div class="card-cat" style="color:#ff4d1c">
+						// Custom
+					</div>
+	
+					<div class="card-title">
+						Нагорода до конкурсу Шевченка
+					</div>
+				</div>
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/kniga-shevshenko.png" alt="kniga shevshenko" />
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/kniga-shevshenko.png" alt="kniga shevshenko" />
+			</article>
+		</div>
+	
+		<!-- GRID -->
+		<div class="portfolio-grid">
+			<article class="portfolio-card">
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#ff4d1c"></div>
+	
+				<img src="/portfolio-img/basket.jpg" alt="Дизайнерска крафтова сумка" />
+	
+				<!-- INFO -->
+				<div class="card-info">
+					<div class="card-cat" style="color:#ff4d1c">
+						// Custom
+					</div>
+	
+					<div class="card-title">
+						Дизайнерска крафтова сумка
+					</div>
+				</div>
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/basket.jpg" alt="Дизайнерска крафтова сумка" />
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/basket.jpg" alt="Дизайнерска крафтова сумка" />
+			</article>
+		</div>
+	
+		<!-- GRID -->
+		<div class="portfolio-grid">
+			<article class="portfolio-card">
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#ff4d1c"></div>
+	
+				<img src="/portfolio-img/motanka.jpg" alt="Берегиня-мотанка" />
+	
+				<!-- INFO -->
+				<div class="card-info">
+					<div class="card-cat" style="color:#ff4d1c">
+						// Custom
+					</div>
+	
+					<div class="card-title">
+						Берегиня-мотанка
+					</div>
+				</div>
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/motanka.jpg" alt="Берегиня-мотанка" />
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/motanka.jpg" alt="Берегиня-мотанка" />
+			</article>
+		</div>
+	
+		<!-- CTA STRIP -->
+		<div class="cta-strip">
+			<div>
+				<h3>
+					МАЄТЕ ІДЕЮ?
+					<br />
+					ДАВАЙТЕ РЕАЛІЗУЄМО ЇЇ РАЗОМ!
+				</h3>
+	
+				<p>Реалізуємо проект будь-якої складності — від ескізу до готового виробу.</p>
+			</div>
+	
+			<a href={ERoutesNames.contact} class='main-link'> 
+		  Замовити проект 
+		  <span>
+			<Arrow />
+		  </span>
+		</a>
+	
+		</div>
+		
+	</section>
 </main>
 
 <style lang="postcss">
@@ -87,12 +198,11 @@
 
 	/* ── PAGE HERO ── */
 	.page-hero {
-		padding: 16rem 3rem 5rem;
-		/* max-width: 1400px; */
+		/* padding: 10rem 1rem 5rem; */
 		margin: 0 auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
+		/* display: flex; */
+		/* justify-content: space-between; */
+		/* align-items: flex-end; */
 		border-bottom: 1px solid var(--border);
 
 		h1 {
@@ -134,15 +244,14 @@
 
 	/* ── GRID ── */
 	.portfolio-grid {
-		max-width: 1400px;
-		margin: 0 auto;
-    max-height: 1000px;
-		padding: 3rem;
+		/* max-width: 1400px; */
+		/* margin: 0 auto; */
+    	max-height: 1000px;
+		/* padding: 3rem; */
 		display: grid;
 		grid-template-columns: 2fr 1fr;
-		grid-template-rows: 1fr 1fr;
 		gap: 2px;
-		/* height: 900px; */
+		margin-bottom: 20px;
 	}
 
 	/* перша — вся ліва колонка, обидва рядки */
@@ -163,12 +272,11 @@
 	}
 
 	.portfolio-card {
-		/* position: relative; */
-		/* background: var(--mid); */
+		position: relative;
 		overflow: hidden;
 		cursor: pointer;
 		
-		height: 100%; /* ← заповнює grid-комірку */
+		height: 100%; 
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -226,70 +334,58 @@
 
 	/* ── CTA STRIP ── */
 	.cta-strip {
-		margin: 0 3rem 6rem;
+		/* margin: 0 3rem 6rem; */
 		/* max-width: calc(1400px - 6rem); */
-		margin-left: auto;
-		margin-right: auto;
+		/* margin-left: auto; */
+		/* margin-right: auto; */
 		background: var(--accent);
-		padding: 4rem 4rem;
+		padding: 3rem;
 		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		flex-direction: column;
+		/* align-items: center; */
+		/* justify-content: space-between; */
 		gap: 2rem;
-	}
 
-	.cta-strip h3 {
-		font-family: var(--font-d);
-		font-size: clamp(2rem, 4vw, 3.5rem);
-		line-height: 1;
-		letter-spacing: 0.02em;
-		color: var(--black);
-	}
-
-	.cta-strip p {
-		font-size: 0.95rem;
-		color: rgba(0, 0, 0, 0.65);
-		font-weight: 300;
-		max-width: 340px;
-		line-height: 1.6;
-		margin-top: 0.8rem;
-	}
-
-	.cta-strip a {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		gap: 1rem;
-		font-size: 0.85rem;
-		font-weight: 500;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: var(--accent);
-		background: var(--black);
-		text-decoration: none;
-		padding: 1.1rem 2.2rem;
-		transition:
-			background 0.2s,
-			color 0.2s;
-	}
-
-	.cta-strip a:hover {
-		background: var(--white);
-	}
-
-	/* ── ANIMATIONS ── */
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-			transform: translateY(16px);
+		h3 {
+			font-family: var(--font-d);
+			font-size: clamp(2rem, 4vw, 3.5rem);
+			line-height: 1;
+			letter-spacing: 0.02em;
+			color: var(--black);
 		}
-		to {
-			opacity: 1;
-			transform: translateY(0);
+	
+		p {
+			font-size: 0.95rem;
+			color: rgba(0, 0, 0, 0.65);
+			font-weight: 300;
+			max-width: 340px;
+			line-height: 1.6;
+			margin-top: 0.8rem;
 		}
+	
+		 a {
+			flex-shrink: 0;
+			display: inline-flex;
+			align-items: center;
+			gap: 1rem;
+			font-size: 0.85rem;
+			font-weight: 500;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: var(--accent);
+			background: var(--black);
+			text-decoration: none;
+			padding: 1.1rem 2.2rem;
+			transition:
+				background 0.2s,
+				color 0.2s;
+
+			&:hover {
+				background: var(--white);
+			}
+		}
+	
 	}
 
-	.portfolio-card {
-		animation: fadeIn 0.4s ease both;
-	}
+
 </style>

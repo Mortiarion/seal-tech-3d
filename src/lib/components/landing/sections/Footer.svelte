@@ -10,6 +10,7 @@
 		justify-content: center;
 		color: var(--gray);
 		letter-spacing: 0.05rem;
+		text-align: center;
 	}
 	
 </style>
