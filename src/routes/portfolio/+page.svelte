@@ -164,6 +164,76 @@
 				<img src="/portfolio-img/motanka.jpg" alt="Берегиня-мотанка" />
 			</article>
 		</div>
+
+		<!-- GRID -->
+		<div class="portfolio-grid">
+			<article class="portfolio-card">
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#ff4d1c"></div>
+	
+				<img src="/portfolio-img/calendar-three.png" alt="calendar-three" />
+	
+				<!-- INFO -->
+				<div class="card-info">
+					<div class="card-cat" style="color:#ff4d1c">
+						// Custom
+					</div>
+	
+					<div class="card-title">
+						Календар безкінечної дії
+					</div>
+				</div>
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/calendar-one.png" alt="Берегиня-мотанка" />
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/calendar-one.png" alt="calendar-one" />
+			</article>
+		</div>
+
+		<!-- GRID -->
+		<div class="portfolio-grid">
+			<article class="portfolio-card">
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#ff4d1c"></div>
+	
+				<img src="/portfolio-img/statue-bacl.png" alt="statue-bacl" />
+	
+				<!-- INFO -->
+				<div class="card-info">
+					<div class="card-cat" style="color:#ff4d1c">
+						// Custom
+					</div>
+	
+					<div class="card-title">
+						Нагорода
+					</div>
+				</div>
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/statue.png" alt="statue" />
+			</article>
+	
+			<article class="portfolio-card" >
+				<!-- color accent bar -->
+				<div class="card-accent" style="background:#73d62b"></div>
+	
+				<img src="/portfolio-img/statue-bacl.png" alt="statue-bacl" />
+			</article>
+		</div>
 	
 		<!-- CTA STRIP -->
 		<div class="cta-strip">
