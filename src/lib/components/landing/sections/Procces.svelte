@@ -1,4 +1,4 @@
-<section class="process border-bottom">
+<section class="process border-bottom" id="procces">
 	<div class="container py-10">
 		<div class="intro">
 			<span class="main-section-label">

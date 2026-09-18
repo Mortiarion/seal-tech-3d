@@ -1,24 +1,22 @@
-<script>
+<script lang='ts'>
 	import Arrow from "$lib/components/icons/Arrow.svelte";
 </script>
 
-<section class="portfolio" id='portfolio'>
+<section class="portfolio border-bottom" id='portfolio'>
 	<div class="container p-5 lg:p-10 xl:p-20 mx-auto">
 		<div class="portfolio-inner md:grid-cols-2">
-			<!-- LEFT: text block -->
 			<div class="portfolio-left">
-				<h2 class="portfolio-label">
+				<span class="main-section-label">
 					Портфоліо
-				</h2>
+				</span>
 	
 				<h3 class="portfolio-title">
-					НАШІ
-					<br />
-					РОБОТИ
+					НАШІ РОБОТИ
 				</h3>
 	
 				<p class="portfolio-desc">
-					Ми пишаємося кожним проектом, який ми реалізували, і раді поділитися деякими з них з вами.
+					Ми пишаємося кожним проектом, який ми реалізували, 
+					і раді поділитися деякими з них з вами
 				</p>
 	
 				<a href='/portfolio' class="main-link">
@@ -26,13 +24,10 @@
 					<span>
 						<Arrow />
 					</span>
-	
 				</a>
 			</div>
 	
-			<!-- RIGHT: 4-image collage -->
 			<div class="portfolio-collage hidden lg:block">
-				<!-- 01: tall vertical center -->
 				<div class="portfolio-item pi-center">
 					<div class="portfolio-img-wrap">
 						<img src="/portfolio-img/heart-mria.png" alt="heart-mria" loading="lazy" />
@@ -43,7 +38,6 @@
 					</p>
 				</div>
 	
-				<!-- 02: square left, vertically centered -->
 				<div class="portfolio-item pi-left">
 					<div class="portfolio-img-wrap">
 						<img src="/portfolio-img/kniga-shevshenko.png" alt="kniga-shevshenko" loading="lazy" />
@@ -54,28 +48,7 @@
 					</p>
 				</div>
 	
-				<!-- 03: right top -->
-				<!-- <div class="portfolio-item pi-right-top">
-					<div class="portfolio-img-wrap">
-						<img src="/portfolio-img/basket.jpg" alt="motanka" loading="lazy" />
-					</div>
-	
-					<p class="item-name">
-						Дизайнерска крафтова сумка
-					</p>
-				</div> -->
-	
-				<!-- 04: right bottom, overlaps 03 and center -->
-				<!-- <div class="portfolio-item pi-right-bottom">
-					<div class="portfolio-img-wrap">
-						<img src="/portfolio-img/motanka.jpg" alt="Project 4" loading="lazy" />
-					</div>
-	
-					<p class="item-name">
-						Берегиня-мотанка
-					</p>
-	
-				</div> -->
+
 			</div>
 		</div>
 	</div>
@@ -84,7 +57,6 @@
 <style lang='postcss'>
 	.portfolio {
 		position: relative;
-		border-top: 1px solid var(--border);
 
 		/* bg-portfolio */
 		&::before {
@@ -98,80 +70,57 @@
 			opacity: 0.35;
 			pointer-events: none;
 		}
-		/* gren line top */
-		&::after {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 3rem;
-			width: 80px;
-			height: 3px;
-			background: var(--accent);
-		}
 
 		.portfolio-inner {
 			position: relative;
 			z-index: 1;
 			display: grid;
-			/* grid-template-columns: repeat(2, minmax(0, 1fr)); */
 			gap: 5rem;
 			align-items: center;
 	
 			.portfolio-left {
 				display: flex;
 				flex-direction: column;
-	
-				.portfolio-label {
-					font-size: 24px;
-					letter-spacing: 0.2rem;
-					text-transform: uppercase;
-					color: var(--accent);
-					display: flex;
-					align-items: center;
-					gap: 0.75rem;
-					margin-bottom: 1.5rem;
-				}
-			
-				.portfolio-label::before {
-					content: '';
-					width: 2rem;
-					height: 1px;
-					background: var(--accent);
-				}
 			
 				.portfolio-title {
-					font-family: var(--font-display);
-					font-size: 3rem;
-					line-height: 1;
-					letter-spacing: 0.2rem;
+					font-size: clamp(4rem, 7vw, 8rem);
 					margin-bottom: 2rem;
 				}
 			
 				.portfolio-desc {
+					line-height: 1.3;
 					color: var(--gray);
 					margin-bottom: 2rem;
 				}
-			
-				.portfolio-link {
+
+				.main-link {
 					display: flex;
-					align-items: center;
 					gap: 1rem;
 					font-weight: 600;
-					letter-spacing: 0.1rem;
+					letter-spacing: 0.2rem;
 					text-transform: uppercase;
-					color: var(--black);
-					background: var(--accent);
-					padding: 1rem 2rem;
-					width: fit-content;
+					color: var(--white);
+					background-color: var(--green);
+					font-size: 1rem;
+					padding: 1rem;
+					align-items: center;
 					transition:
-						background 0.3s,
-						color 0.3s,
-						gap 0.3s;
-				}
-			
-				.portfolio-link:hover {
-					background: var(--white);
-					gap: 1.1rem;
+						background-color 0.3s,
+						color 0.3s;
+					width: fit-content;
+
+					&:hover {
+						background-color: var(--orange);
+						color: var(--white);
+					}
+
+					span {
+						transition: transform 0.3s;
+					}
+
+					&:hover span {
+						transform: translateX(4px);
+					}
 				}
 			}
 
@@ -185,17 +134,14 @@
 					cursor: pointer;
 					display: flex;
 					flex-direction: column;
-					transition:
-						transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-						box-shadow 0.35s;
+					transition: box-shadow 0.3s;
 		
 					&:hover {
 						z-index: 10;
-						transform: scale(1.04);
 						box-shadow: 0 20px 56px rgba(0, 0, 0, 0.75);
 
 						& img {
-							transform: scale(1.07);
+							transform: scale(1.1);
 						}
 
 						& .portfolio-img-wrap::after {
@@ -219,9 +165,9 @@
 						left: 0;
 						width: 3px;
 						height: 0;
-						background: var(--accent);
+						background: var(--accent-green);
 						z-index: 6;
-						transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+						transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 					}
 
 					/* image fills space above label */
@@ -237,7 +183,7 @@
 							object-fit: cover;
 							position: relative;
 							z-index: 1;
-							transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+							transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 						}
 
 						/* img bg bottom opacity */
@@ -253,9 +199,7 @@
 					}
 					
 					&.pi-center, 
-					&.pi-left, 
-					&.pi-right-top, 
-					&.pi-right-bottom {
+					&.pi-left {
 						/* shared styles for all portfolio items */
 						border: 1px solid var(--border);
 						outline: 2px solid rgba(255, 255, 255, 0.07);
@@ -279,27 +223,8 @@
 						height: 62%;
 						/* z-index: 2; */
 					}
-				
-					/* 03 — right column, upper half */
-					&.pi-right-top {
-						right: 0%;
-						top: -10%;
-						width: 30%;
-						height: 58%;
-						/* z-index: 3; */
-					}
-				
-					/* 04 — right column, lower half, shifted left to overlap center */
-					&.pi-right-bottom {
-						right: 4%;
-						bottom: -12%;
-						width: 30%;
-						height: 68%;
-						/* z-index: 2; */
-					}
 
 					.item-name {
-						display: flex;
 						padding: 0.65rem 0.9rem;
 						border-top: 1px solid var(--border);
 						transition: background 0.2s;
@@ -309,21 +234,4 @@
 			}
 		}
 	}
-
-	@media (width >= 48rem) {
-		.portfolio {
-			.portfolio-inner {
-				.portfolio-left {
-					.portfolio-title {
-						font-size: 6rem;
-					}
-				}
-			}
-		}
-
-		h3 {
-			font-size: 6rem;
-		}
-	}
-
 </style>
