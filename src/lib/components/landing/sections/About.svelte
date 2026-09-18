@@ -1,11 +1,10 @@
-<section class="about" id="about">
-	<div class="container mx-auto p-5 lg:p-10 xl:p-20">
-		<h2 class="about-label tracking-widest uppercase mb-5">
+<section class="about border-bottom" id="about">
+	<div class="container py-10">
+		<span class="main-section-label">
 			Про нас
-		</h2>
+		</span>
 	
 		<div class="grid md:grid-cols-3 gap-10 mb-5">
-	
 			<p>
 				У SealTech3D ми віримо, що кожна ідея заслуговує на життя.
 				Іноді це лише думка, ескіз або мрія — але з правильною 
@@ -13,7 +12,7 @@
 				стати реальним об’єктом.
 			</p>
 	
-			<p class="f">
+			<p class="col-two">
 				Працюємо з інженерами, дизайнерами, стартапами та звичайними 
 				людьми, яким потрібно 
 				«<span>
@@ -23,8 +22,6 @@
 				<span>
 					справжнє
 				</span>». 
-	
-				Без зайвої бюрократії, з особистим підходом.
 			</p>
 	
 			<p>
@@ -34,8 +31,7 @@
 			</p>
 		</div>
 	
-		<p class="d">
-	
+		<p class="sub">
 			Ви 
 			<span>
 				уявляєте
@@ -51,14 +47,29 @@
 
 <style lang="postcss">
 	.about {
-		border-top: 1px solid #222;
+		position: relative;
+		
+		&::before {
+		    content: "";
+			position: absolute;
+			inset: 0;
+			background-image: 
+				linear-gradient(var(--border) 2px, 
+				transparent 2px), 
+				linear-gradient(90deg, var(--border) 
+				2px, transparent 2px);
+			background-size: 60px 60px;
+			opacity: .35;
+			pointer-events: none;
+			z-index: -1;
+		}
 
 		p {
 			line-height: 1.6;
 			letter-spacing: 1px;
 		
 			span:first-of-type {
- 				color: var(--accent);
+ 				color: var(--accent-green);
  			}
 
  			span:last-of-type {
@@ -66,37 +77,26 @@
 			}
 
 		}
-
-		.d {
-			font-size: 24px;
-			text-transform: uppercase;
-		}
 		
-		.f {
-			span:first-of-type {
+		.col-two {
+			span:first-of-type,
+			span:last-of-type {
 				font-size: 24px;
 				text-transform: uppercase;
+			}
+
+			span:first-of-type {
 				color: var(--orange);
 			}
 			
 			span:last-of-type {
-				 color: var(--accent);
-				 font-size: 24px;
-				text-transform: uppercase;
+				color: var(--accent-green);
 			}
 		}
-	}
 
-	.about-label {
-		color: var(--accent);
-	}
-
-	@media (width >= 48rem) {
-		.about {
-			> div {
-
-				grid-template-columns: repeat(3, minmax(0, 1fr));
-			}
+		.sub {
+			font-size: 24px;
+			text-transform: uppercase;
 		}
 	}
 </style>

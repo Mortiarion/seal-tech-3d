@@ -19,6 +19,8 @@
 
 	--letter-spacing-title: 0.25rem;
 	--letter-spacing-text: 0.0125rem;
+
+	--border-bottom-section: #1e1e1e;
 }
 
 html {
@@ -75,6 +77,14 @@ header {
 		height: 2px;
 		background-color: var(--accent-green);
 	}
+}
+
+.border-bottom::after {
+	content: '';
+	border-bottom: 1px solid var(--border-bottom-section);
+	width: 100%;
+	height: 1px;
+	display: flex;
 }
 
 .main-link {
