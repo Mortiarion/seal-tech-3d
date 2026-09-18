@@ -9,8 +9,8 @@
 
 		<!-- pl-20 pt-56 pb-10 -->
 		<div class="hero-left flex flex-col justify-center pt-30 md:pt-56 pb-5 ">
-			<h2>
-				3D Друк 
+			<h2 class="main-section-label">
+				Студія 3D Друк 
 			</h2>
 	
 			<h1>

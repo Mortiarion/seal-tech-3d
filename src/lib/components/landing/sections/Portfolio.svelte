@@ -1,6 +1,5 @@
 <script>
 	import Arrow from "$lib/components/icons/Arrow.svelte";
-	import { ERoutesNames } from "../../../../routes/routing-helpers";
 </script>
 
 <section class="portfolio" id='portfolio'>
@@ -22,7 +21,7 @@
 					Ми пишаємося кожним проектом, який ми реалізували, і раді поділитися деякими з них з вами.
 				</p>
 	
-				<a href={ERoutesNames.portfolioPage} class="main-link">
+				<a href='/portfolio' class="main-link">
 					Переглянути все
 					<span>
 						<Arrow />
@@ -56,7 +55,7 @@
 				</div>
 	
 				<!-- 03: right top -->
-				<div class="portfolio-item pi-right-top">
+				<!-- <div class="portfolio-item pi-right-top">
 					<div class="portfolio-img-wrap">
 						<img src="/portfolio-img/basket.jpg" alt="motanka" loading="lazy" />
 					</div>
@@ -64,10 +63,10 @@
 					<p class="item-name">
 						Дизайнерска крафтова сумка
 					</p>
-				</div>
+				</div> -->
 	
 				<!-- 04: right bottom, overlaps 03 and center -->
-				<div class="portfolio-item pi-right-bottom">
+				<!-- <div class="portfolio-item pi-right-bottom">
 					<div class="portfolio-img-wrap">
 						<img src="/portfolio-img/motanka.jpg" alt="Project 4" loading="lazy" />
 					</div>
@@ -76,7 +75,7 @@
 						Берегиня-мотанка
 					</p>
 	
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>

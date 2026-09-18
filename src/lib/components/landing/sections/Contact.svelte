@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import { ERoutesNames } from "../../../../routes/routing-helpers";
+	import { ERoutesNames } from "../../routing-helpers";
 </script>
 
 <section class="contact" id="contact">
