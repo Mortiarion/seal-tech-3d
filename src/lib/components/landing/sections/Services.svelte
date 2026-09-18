@@ -1,10 +1,10 @@
-<section class="services" id="services">
+<section class="services border-bottom" id="services">
 	<div class="container mx-auto p-5 lg:p-10 xl:p-20">
 
-		<div class="services-header">
-			<h2>
+		<div class="border-bottom mb-10">
+			<span class="main-section-label">
 				ПОСЛУГИ
-			</h2>
+			</span>
 		</div>
 	
 		<div class="services-grid md:grid-cols-2">
@@ -18,7 +18,8 @@
 				</div>
 	
 				<p class="service-desc">
-					Малі та середні тиражі з однаковою якістю в кожній деталі. Гнучкі строки, конкурентні ціни.
+					Малі та середні тиражі з однаковою якістю в кожній деталі. 
+					Гнучкі строки, конкурентні ціни.
 				</p>
 			</div>
 	
@@ -41,80 +42,70 @@
 </section>
 
 <style lang="postcss">
-	
 	.services {
 		background: var(--mid);
-		border-top: 1px solid #2a2a2a;
-	}
+		.services-grid {
+			display: grid;
+			gap: 2px;
 
-	.services-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
-		margin-bottom: 4rem;
-		border-bottom: 1px solid #333;
-		padding-bottom: 2rem;
-	}
+			.service-card {
+				background: var(--black);
+				padding: 3rem 2.5rem;
+				position: relative;
+				overflow: hidden;
+				transition: background 0.3s;
 
-	.services-grid {
-		display: grid;
-		/* grid-template-columns: repeat(2, minmax(0, 1fr)); */
-		gap: 2px;
-	}
+				&::before {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 0;
+					height: 2px;
+					background: var(--orange);
+					transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+				}
 
-	.service-card {
-		background: var(--black);
-		padding: 3rem 2.5rem;
-		position: relative;
-		overflow: hidden;
-		transition: background 0.3s;
-	}
+				&:hover::before {
+					width: 100%;
+				}
 
-	.service-card::before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0;
-		height: 2px;
-		background: var(--orange);
-		transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-	}
+				&:hover {
+					background: #111;
+				}
 
-	.service-card:hover::before {
-		width: 100%;
-	}
+				.service-num {
+					font-family: var(--font-display);
+					font-size: 4rem;
+					color: #222;
+					line-height: 1;
+					margin-bottom: 1.5rem;
+					transition: color 0.3s;
+				}
 
-	.service-card:hover {
-		background: #111;
-	}
+				&:hover .service-num {
+					color: var(--accent-green);
+				}
 
-	.service-num {
-		font-family: var(--font-display);
-		font-size: 4rem;
-		color: #222;
-		line-height: 1;
-		margin-bottom: 1.5rem;
-		transition: color 0.3s;
-	}
+				&:hover .service-title {
+					color: var(--orange);
+				}
 
-	.service-card:hover .service-num {
-		color: var(--accent);
-	}
+				.service-title {
+					font-family: var(--font-display);
+					font-size: 1.6rem;
+					letter-spacing: 0.05em;
+					color: var(--white);
+					margin-bottom: 1rem;
+				}
 
-	.service-title {
-		font-family: var(--font-display);
-		font-size: 1.6rem;
-		letter-spacing: 0.05em;
-		color: var(--white);
-		margin-bottom: 1rem;
+				.service-desc {
+					font-size: 0.9rem;
+					line-height: 1.7;
+					color: var(--gray);
+					font-weight: 300;
+				}
+			}
+		}
 	}
-
-	.service-desc {
-		font-size: 0.9rem;
-		line-height: 1.7;
-		color: var(--gray);
-		font-weight: 300;
-	}
-
 </style>

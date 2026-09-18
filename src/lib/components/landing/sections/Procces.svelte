@@ -124,7 +124,7 @@
 			}
 		
 			.subtitle {
-				color: #8f8f8f;
+				color: var(--subtitle-section-procces);
 				font-size: 1.05rem;
 				line-height: 1.7;
 				margin: 0;
@@ -166,7 +166,7 @@
 						height: 11px;
 						border: 2px solid var(--other-green);
 						border-radius: 50%;
-						background: #0f0f0f;
+						background: var(--bg-section-procces);
 						z-index: 1;
 					}
 
@@ -195,7 +195,7 @@
 					p {
 						font-size: 0.92rem;
 						line-height: 1.65;
-						color: #858585;
+						color: var(--subtitle-section-procces);
 						margin: 0;
 					}
 				}
@@ -207,7 +207,6 @@
 			margin: 0 auto;
 			width: fit-content;
 			gap: 18px;
-			/* background: #4ade80; */
 			background: var(--lime);
 			color: #111;
 			padding: 15px 20px 15px 24px;
@@ -219,7 +218,6 @@
 
 			&:hover {
 				transform: translateY(-2px);
-				/* background: #6ee796; */
 				background: var(--accent-green);
 			}
 		}
