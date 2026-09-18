@@ -4,8 +4,7 @@
 	import { ERoutesNames } from "$lib/components/routing-helpers";
 	import { clickOutSide } from "$lib/components/clickOutSide";
     
-
-     let isOpenBurger = $state(false);
+    let isOpenBurger = $state(false);
 
     function toggleBurger() {
         isOpenBurger = !isOpenBurger;
@@ -16,37 +15,58 @@
     }
 </script>
 
-{#if isOpenBurger}
-    <div class="mob-nav" transition:fade use:clickOutSide={closeBurger}>
+<div class="mob-menu my-auto md:hidden" use:clickOutSide={closeBurger}>
+    {#if isOpenBurger}
+        <div class="mob-nav" transition:fade>
+            <a 
+                href={ERoutesNames.about} 
+                onclick={closeBurger} 
+                title='Перейти до секції'
+                aria-label="Перейти до секції"
+            > 
+                Про нас
+            </a>
     
-        <a href={ERoutesNames.about} onclick={closeBurger} title='Перейти до секції'> 
-            Про нас
-        </a>
-
-        <a href={ERoutesNames.services} onclick={closeBurger} title='Перейти до секції'> 
-            Послуги
-        </a>
-        
-        <a href={ERoutesNames.portfolio} onclick={closeBurger} title='Перейти до секції'> 
-            Портфоліо
-        </a>
-
-        <a href={ERoutesNames.contact} onclick={closeBurger} title='Перейти до секції'> 
-            Контакти
-        </a>
-    </div>
-{/if}
-
-<button 
-    class="burger flex flex-col md:hidden" 
-    title={isOpenBurger ? 'Закрити меню' : 'Відкрити меню'}  
-    aria-label={isOpenBurger ? 'Закрити меню' : 'Відкрити меню'} 
-    onclick={toggleBurger}
->
-    <span class="burger-line" class:rotate={isOpenBurger}></span>
-    <span class="burger-line" class:rotate={isOpenBurger}></span>
-    <span class="burger-line" class:rotate={isOpenBurger}></span>
-</button>
+            <a 
+                href={ERoutesNames.services} 
+                onclick={closeBurger} 
+                title='Перейти до секції'
+                aria-label="Перейти до секції"
+            > 
+                Послуги
+            </a>
+            
+            <a 
+                href={ERoutesNames.portfolio} 
+                onclick={closeBurger} 
+                title='Перейти до секції'
+                aria-label="Перейти до секції"
+            > 
+                Портфоліо
+            </a>
+    
+            <a 
+                href={ERoutesNames.contact} 
+                onclick={closeBurger} 
+                title='Перейти до секції'
+                aria-label="Перейти до секції"
+            > 
+                Контакти
+            </a>
+        </div>
+    {/if}
+    
+    <button 
+        class="burger flex flex-col md:hidden" 
+        title={isOpenBurger ? 'Закрити меню' : 'Відкрити меню'}  
+        aria-label={isOpenBurger ? 'Закрити меню' : 'Відкрити меню'} 
+        onclick={toggleBurger}
+    >
+        <span class="burger-line" class:rotate={isOpenBurger}></span>
+        <span class="burger-line" class:rotate={isOpenBurger}></span>
+        <span class="burger-line" class:rotate={isOpenBurger}></span>
+    </button>
+</div>
 
 <style lang='postcss'>
     .mob-nav {
@@ -64,11 +84,10 @@
         border-radius: 8px;
         z-index: 5;
         backdrop-filter: blur(14px);
-        /* box-shadow: 0 1px 0 var(--border); */
     }
 
     .burger {
-        border: 1px solid var(--accent);
+        border: 1px solid var(--accent-green);
         padding: 6px;
         width: 32px;
         gap: 4px;
@@ -84,7 +103,7 @@
         & .burger-line {
             width: 100%;
             height: 2px;
-            background: linear-gradient(90deg, var(--accent), var(--orange));
+            background: linear-gradient(90deg, var(--accent-green), var(--orange));
             transition: transform 0.3s, opacity 0.3s ;
 
             &.rotate {

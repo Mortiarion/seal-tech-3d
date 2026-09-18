@@ -14,7 +14,7 @@
 	--red: #e53704;
 	--orange: #fd6f00;
 	--yellow: #f0cd13;
-	--accent: #73d62b;
+	--accent-green: #73d62b;
 	--green: #03a337;
 
 	--letter-spacing-title: 0.25rem;
@@ -29,10 +29,12 @@ body {
 	background: var(--black);
 	color: var(--white);
 	font-family: var(--font-body);
+	line-height: 1;
+	letter-spacing: var(--letter-spacing-text);
 }
 
 .container {
-	@apply mx-auto py-5 px-5 lg:px-10 xl:px-20
+	@apply mx-auto px-5 lg:px-10 xl:px-20
 }
 
 header {
@@ -54,7 +56,7 @@ header {
 }
 
 .main-section-label {
-	font-size: 0.825rem;
+	font-size: clamp(0.75rem, 3vw, 1rem);
 	letter-spacing: var(--letter-spacing-title);
 	color: var(--accent-green);
 	margin-bottom: 2rem;
@@ -74,24 +76,6 @@ header {
 		background-color: var(--accent-green);
 	}
 }
-
-/* h2 {
-	font-size: 12px;
-	text-transform: uppercase;
-	color: var(--accent);
-	font-weight: 600;
-	margin-bottom: 1rem;
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-
-	&::before {
-		content: '';
-		width: 2rem;
-		height: 1px;
-		background: var(--accent);
-	}
-} */
 
 .main-link {
 	display: flex;

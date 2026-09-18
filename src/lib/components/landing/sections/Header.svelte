@@ -26,7 +26,7 @@
 <!-- 1px маркер на самому верху — observer стежить за ним -->
 <div id="header-sentinel" aria-hidden="true" bind:this={headerSentinel}></div>
 
-<header class="fixed top-0 right-0 left-0 z-50" class:scrolled>
+<header class:scrolled>
     <div class="container">
     
         <nav class="flex justify-between" >
@@ -41,6 +41,12 @@
 </header>
 
 <style lang="postcss">
-    
-
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        padding-top: 1.25rem;
+    }
 </style>
