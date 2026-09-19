@@ -1,237 +1,433 @@
 <script lang="ts">
-	import Arrow from '$lib/components/icons/Arrow.svelte';
-	import { ERoutesNames } from '../../lib/components/routing-helpers';
+	import { onMount } from 'svelte';
+	// для TypeScript, щоб не сварився
+	// declare namespace svelteHTML {
+	// 	interface IntrinsicElements {
+	// 		'model-viewer': any;
+	// 	}
+	// } це наче пише нада але як відключаю то все гуд
+
+	type TView = 'front' | 'back';
+
+	interface ISlideImages {
+		src: string;
+		alt: string;
+	}
+
+	const slideImages: Record<TView, ISlideImages> = {
+		front: {
+			src: '/portfolio-img/statue-front.png',
+			alt: 'Statue front view'
+		},
+		back: {
+			src: '/portfolio-img/statue-back.png',
+			alt: 'Statue back view'
+		}
+	};
+
+	const slideOrder: TView[] = ['front', 'back'];
+	let activeSlide = $state(0);
+	let currentView = $derived(slideOrder[activeSlide]);
+	let currentImage = $derived(slideImages[currentView]);
+	let pause = $state(false);
+
+	onMount(() => {
+		const interval = setInterval(() => {
+			if (!pause) activeSlide = (activeSlide + 1) % slideOrder.length;
+		}, 2000);
+
+		return () => clearInterval(interval);
+	});
+
+	// let showModal = $state(false);
+	// let dialog: HTMLDialogElement | null = $state(null);
+
+	// $effect(() => {
+	// 	if (!dialog) return;
+
+	// 	if (showModal) {
+	// 		dialog.showModal();
+	// 	} else if (dialog.open) {
+	// 		dialog.close();
+	// 	}
+	// });
 </script>
 
 <svelte:head>
-	<title>Seal Tech 3D - Портфоліо</title>
+    <title>
+        SealTech3D - Портфоліо
+    </title>
 </svelte:head>
 
-<main>
-	<section class="container mx-auto px-5 md:px-10 xl:px-20 pt-30 md:pt-56 pb-10">
-	
-	
-		<!-- CTA STRIP -->
-		<div class="cta-strip">
-			<div>
-				<h3>
-					МАЄТЕ ІДЕЮ?
-					<br />
-					ДАВАЙТЕ РЕАЛІЗУЄМО ЇЇ РАЗОМ!
-				</h3>
-	
-				<p>Реалізуємо проект будь-якої складності — від ескізу до готового виробу.</p>
-			</div>
-	
-			<a href={ERoutesNames.contact} class='main-link'> 
-		  Замовити проект 
-		  <span>
-			<Arrow />
-		  </span>
-		</a>
-	
+<section class="portfolio">
+	<div class="container">
+
+        <div class="portfolio-hero pt-35 md:pt-60">
+
+			<p class="head">
+				Від ідеї до готового виробу. Тут ви можете побачити проекти, 
+				які ми допомогли втілили в життя. Ваша ідея може бути слідуюча 
+			</p>
+
 		</div>
-		
-	</section>
-</main>
+
+		<div class="portfolio-carousel">
+			<button
+				class="slide-card"
+				onmouseenter={() => (pause = true)}
+				onmouseleave={() => (pause = false)}
+				// onclick={() => (showModal = true)}
+			>
+				<div class="slide-image">
+					<img src={currentImage.src} alt={currentImage.alt} />
+				</div>
+
+				<div class="slide-info">
+					<span class="slide-number">01</span>
+					<span class="slide-title">Statue</span>
+					<span class="slide-view">{currentView}</span>
+				</div>
+			</button>
+		</div>
+
+        <div class="portfolio-cta">
+			<div class="cta-content">
+				<h2>
+                    З'явилась ідея?
+                </h2>
+
+				<p>
+                    Розкажіть про свою ідею — і ми допоможемо втілити її в реальність.
+                </p>
+			</div>
+
+			<a href="/#contacts" class="btn primary">
+                Розповісти про ідею
+            </a>
+		</div>
+	</div>
+</section>
+
+<!-- <dialog
+	bind:this={dialog}
+	onclose={() => (showModal = false)}
+	onclick={(e) => { if (e.target === dialog) dialog?.close(); }}
+>
+	<div>
+		<div class="viewer-wrap">
+			<model-viewer
+				src="/portfolio/models/book-tree-statue-optimized.glb"
+				alt="Statue 3D model"
+				camera-controls
+				touch-action="pan-y"
+				auto-rotate
+				shadow-intensity="1"
+				exposure="1"
+				shadow-softness="0.8"
+				tone-mapping="commerce"
+				environment-image="neutral"
+				style="width: 100%; height: 100%; background: transparent;"
+			></model-viewer>
+		</div>
+		<button onclick={() => dialog?.close()}>close modal</button>
+	</div>
+</dialog> -->
+
+
 
 <style lang="postcss">
-	img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+
+
+:root {
+	/* --bg-body: #0a0a0b;
+	--bg2: #111114;
+	--bg3: #18181c;
+	--text: #f0ede8; */
+	/* --text2: #9e9b94; */
+	/* --text3: #5a5855; */
+	
+
+	/* --border-main: #ffffff12; */
+	/* --border2: #ffffff21; */
+
+	/* --black: #0a0a0a; */
+	/* --white: #f0f0f0; */
+	/* --lime: #c8ff00; */
+	/* --cyan: #00d4ff; */
+	/* --mid: #141414; */
+	/* --gray: #6b6864; */
+
+	/* --error: #e24b4a;  */
+	/* --success: #1d9e75; */
+
+	/* --letter-spacing-title: 0.25rem; */
+	/* --letter-spacing-text: 0.0125rem; */
+
+	/* --border-bottom-section: #1e1e1e; */
+	/* --header-bg-transparent: #0a0a0bb3; */
+
+	/* --border: #ffffff12; */
+	/* --border2: #ffffff21; */
+
+	/* --backdrop-filter: blur(8px); */
+
+	/* --font-display: 'Bebas Neue', sans-serif;
+	--font-body: 'DM Sans', sans-serif; */
+
+	/* --red: #e53704;
+	--orange: #fd6f00;
+	--yellow: #f0cd13;
+	--accent-green: #73d62b;
+	--green: #03a337; */
+}
+
+/* .contact-nav-icon {
+	border: 1px solid var(--border);
+	padding: 0.5rem;
+} */
+
+/* .title-accent-green {
+	font-family: var(--font-display);
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--text);
+
+	span {
+		color: var(--accent-green);
 	}
+} */
 
-	/* ── PAGE HERO ── */
-	.page-hero {
-		/* padding: 10rem 1rem 5rem; */
-		margin: 0 auto;
-		/* display: flex; */
-		/* justify-content: space-between; */
-		/* align-items: flex-end; */
-		border-bottom: 1px solid var(--border);
+.btn {
+	padding: 0.75rem 1.25rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: color 0.3s ease, background-color 0.3s ease;
 
-		h1 {
-			font-family: var(--font-d);
-			font-size: clamp(4rem, 9vw, 9rem);
-			line-height: 0.9;
-			letter-spacing: -0.01em;
-			span:first-of-type {
-				color: var(--orange);
-			}
-			span:last-of-type {
-				color: var(--accent);
-			}
-		}
-	}
+	&.primary {
+		background-color: var(--accent-orange2);
+		color: var(--white);
+		border: none;
+		border-radius: 4px;
 
-	.page-hero-meta {
-		text-align: right;
-
-		.count {
-			font-family: var(--font-d);
-			font-size: 3.5rem;
-			line-height: 1;
-			color: var(--gray);
-
-			& strong {
+		@media (hover: hover) {
+			&:hover {
+				background-color: var(--accent-orange);
 				color: var(--white);
 			}
 		}
+	}
 
-		p {
-			font-size: 0.8rem;
-			letter-spacing: 0.12em;
-			text-transform: uppercase;
+	@media (hover: hover) {
+		&:hover {
 			color: var(--gray);
-			margin-top: 0.5rem;
+		}
+	}
+}
+
+/* .subtitle {
+	color: var(--text2);
+	font-size: 1rem;
+	max-width: 320px;
+	line-height: 1.5;
+	margin-bottom: 2rem;
+} */
+    .portfolio-hero {
+		margin-bottom: 3rem;
+
+		.head {
+			padding: 2.5rem;
+			background: var(--bg2);
+			border: 1px solid var(--border);
+			border-radius: 16px;
+			font-size: clamp(1rem, 3vw, 1.5rem);
+			line-height: 1.2;
+			letter-spacing: 0.125rem;
+			font-family: var(--font-display);
+			color: var(--text2);
 		}
 	}
 
-	/* ── GRID ── */
-	.portfolio-grid {
-		/* max-width: 1400px; */
-		/* margin: 0 auto; */
-    	max-height: 1000px;
-		/* padding: 3rem; */
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-		gap: 2px;
-		margin-bottom: 20px;
-	}
-
-	/* перша — вся ліва колонка, обидва рядки */
-	.portfolio-card:nth-child(1) {
-		grid-column: 1;
-		grid-row: 1 / 3;
-	}
-
-	/* 2 і 3 — права колонка, по рядку */
-	.portfolio-card:nth-child(2) {
-		grid-column: 2;
-		grid-row: 1;
-	}
-
-	.portfolio-card:nth-child(3) {
-		grid-column: 2;
-		grid-row: 2;
-	}
-
-	.portfolio-card {
-		position: relative;
-		overflow: hidden;
-		cursor: pointer;
+	.viewer-wrap {
+		aspect-ratio: 1 / 3;
+		width: 300px;
+		height: 400px;
 		
-		height: 100%; 
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
+		border-radius: 12px;
+		overflow: hidden;
+		background: var(--bg3);
 	}
 
-	/* color accent bar */
-	.card-accent {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 3px;
-		height: 0;
-		transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-	}
-
-	.portfolio-card:hover .card-accent {
-		height: 100%;
-	}
-
-	/* bottom info */
-	.card-info {
-		position: absolute;
+	.portfolio-carousel {
+		nin-width: 200px;
 		width: 100%;
-		z-index: 2;
-		padding: 2rem 2rem 1.8rem;
-		background: linear-gradient(to top, rgba(10, 10, 10, 0.92) 0%, transparent 100%);
-		transform: translateY(4px);
-		transition:
-			transform 0.3s,
-			opacity 0.3s;
-		opacity: 0;
+		max-width: 400px;
+        margin-bottom: 2rem;
+        
+        .slide-card {
+            display: block;
+            position: relative;
+            overflow: hidden;
+    
+            background: var(--bg2);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+    
+            transition:
+                border-color 300ms ease,
+                transform 300ms ease,
+                box-shadow 300ms ease;
+        }
+    
+        .slide-image {
+            position: relative;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            background: var(--bg3);
+        }
+    
+        .slide-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                transparent 45%,
+                color-mix(in srgb, var(--bg-body) 55%, transparent)
+            );
+            pointer-events: none;
+        }
+    
+        .slide-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 1.25rem;
+            transition: transform 500ms ease;
+        }
+    
+        .slide-card:hover {
+            border-color: var(--accent-green);
+            transform: translateY(-6px);
+            box-shadow: 0 14px 32px color-mix(in srgb, var(--text) 8%, transparent);
+        }
+    
+        .slide-card:hover .slide-image img {
+            transform: scale(1.05);
+        }
+    
+        .slide-info {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 12px;
+    
+            padding: 14px 16px;
+            border-top: 1px solid var(--border);
+            background: var(--bg2);
+    
+            font-family: var(--font-body);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+    
+        .slide-number {
+            color: var(--accent-green);
+            font-weight: 600;
+        }
+    
+        .slide-title {
+            color: var(--text);
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+    
+        .slide-view {
+            color: var(--accent-orange);
+            font-weight: 500;
+        }
 	}
 
-	.portfolio-card:hover .card-info {
-		opacity: 1;
-		transform: translateY(0);
-	}
-
-	.card-cat {
-		font-size: 0.65rem;
-		letter-spacing: 0.18em;
-		text-transform: uppercase;
-		margin-bottom: 0.5rem;
-		font-weight: 500;
-	}
-
-	.card-title {
-		font-family: var(--font-display);
-		font-size: 1.6rem;
-		letter-spacing: 0.04em;
-		line-height: 1;
-		color: var(--white);
-		margin-bottom: 0.3rem;
-	}
-
-	/* ── CTA STRIP ── */
-	.cta-strip {
-		/* margin: 0 3rem 6rem; */
-		/* max-width: calc(1400px - 6rem); */
-		/* margin-left: auto; */
-		/* margin-right: auto; */
-		background: var(--accent);
-		padding: 3rem;
+    .portfolio-cta {
 		display: flex;
-		flex-direction: column;
-		/* align-items: center; */
-		/* justify-content: space-between; */
-		gap: 2rem;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1.5rem;
+		padding: 2.5rem;
+		background: var(--bg2);
+		border: 1px solid var(--border);
+		border-radius: 16px;
+		margin: 0 0 2rem 0;
+		.cta-content {
+			
 
-		h3 {
-			font-family: var(--font-d);
-			font-size: clamp(2rem, 4vw, 3.5rem);
-			line-height: 1;
-			letter-spacing: 0.02em;
-			color: var(--black);
-		}
-	
-		p {
-			font-size: 0.95rem;
-			color: rgba(0, 0, 0, 0.65);
-			font-weight: 300;
-			max-width: 340px;
-			line-height: 1.6;
-			margin-top: 0.8rem;
-		}
-	
-		 a {
-			flex-shrink: 0;
-			display: inline-flex;
-			align-items: center;
-			gap: 1rem;
-			font-size: 0.85rem;
-			font-weight: 500;
-			letter-spacing: 0.1em;
-			text-transform: uppercase;
-			color: var(--accent);
-			background: var(--black);
-			text-decoration: none;
-			padding: 1.1rem 2.2rem;
-			transition:
-				background 0.2s,
-				color 0.2s;
+			h2 {
+				font-family: var(--font-display);
+				font-size: clamp(1.6rem, 3vw, 2.2rem);
+				text-transform: uppercase;
+				margin: 0 0 0.5rem;
+				color: var(--text);
+			}
 
-			&:hover {
-				background: var(--white);
+			p {
+				margin: 0;
+				color: var(--text2);
+				font-size: 0.95rem;
+				line-height: 1.5;
+				max-width: 380px;
 			}
 		}
 	
 	}
 
 
+
+
+
+
+
+
+
+
+
+	dialog {
+		max-width: 32em;
+		border-radius: 0.2em;
+		border: none;
+		padding: 0;
+	}
+	dialog::backdrop {
+		background: rgba(0, 0, 0, 0.3);
+	}
+	dialog > div {
+		padding: 1em;
+	}
+	dialog[open] {
+		animation: zoom 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+	@keyframes zoom {
+		from {
+			transform: scale(0.95);
+		}
+		to {
+			transform: scale(1);
+		}
+	}
+	dialog[open]::backdrop {
+		animation: fade 0.2s ease-out;
+	}
+	@keyframes fade {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	button {
+		display: block;
+	}
 </style>

@@ -1,13 +1,16 @@
 <script lang='ts'>
-	import { ERoutesNames } from "../../routing-helpers";
+	import EmailIcon from "$lib/components/icons/EmailIcon.svelte";
+	import PhoneIcon from "$lib/components/icons/PhoneIcon.svelte";
+	import TelegramIcon from "$lib/components/icons/TelegramIcon.svelte";
+	import { ERoutesNames } from "$lib/components/routing-helpers";
 </script>
 
-<section class="contact" id="contact">
+<section class="contact" id="contacts">
 	<div class="container p-5 lg:p-10 xl:p-20 mx-auto grid lg:grid-cols-2 gap-20">
-		<div class=''>
-			<h2>
+		<div>
+			<span class="main-section-label">
 				ЗВ'ЯЖІТЬСЯ З НАМИ
-			</h2>
+			</span>
 	
 			<p>
 				Розкажіть про ваш проект — і ми допоможемо втілити вашу ідею в життя. 
@@ -17,10 +20,15 @@
 			
 			<div class="contact-links">
 	
-				<a href="tel:+380668038198" class="contact-link" title="">
+				<a 
+					href="tel:+380668038198" 
+					class="contact-link" 
+					title="Розкажіть про ваш проект"
+					aria-label="Розкажіть про ваш проект"
+				>
 					<div class="contact-link-inner truncate">
 						<span class="contact-icon">
-							☎ 
+							<PhoneIcon />
 						</span>
 						Телефон
 						<i>
@@ -34,10 +42,17 @@
 	
 				</a>
 	
-				<a href="https://t.me/SealTech3D" class="contact-link" target="_blank" rel="noopener">
+				<a 
+					href="https://t.me/SealTech3D" 
+					class="contact-link" 
+					target="_blank" 
+					rel="noopener"
+					title="Напишіть про ваш проект"
+					aria-label="Напишіть про ваш проект"
+				>
 					<div class="contact-link-inner truncate">
 						<span class="contact-icon">
-							✈
+							<TelegramIcon />
 						</span>
 						Telegram 
 						<i>
@@ -50,10 +65,14 @@
 					</span>
 				</a>
 	
-				<a href="mailto:sealtech3d@gmail.com" class="contact-link" title="">
+				<a 
+					href="mailto:sealtech3d@gmail.com" 
+					class="contact-link" 
+					title="Можна і так))"
+				>
 					<div class="contact-link-inner truncate">
 						<span class="contact-icon">
-							✉
+							<EmailIcon />
 						</span>
 	
 						<i>
@@ -78,16 +97,9 @@
 
 <style lang="postcss">
 	.contact {
-		/* padding: 3rem 5rem; */
-		/* display: grid; */
-		/* grid-template-columns: repeat(2, minmax(0, 1fr)); */
-		/* gap: 6rem; */
-		/* align-items: center; */
-		border-top: 1px solid #222;
+		
 
-		> div {
-			
-		}
+	
 	}
 
 	i {
@@ -121,7 +133,7 @@
 		text-transform: uppercase;
 
 		&:hover {
-			background: var(--accent);
+			background: var(--green);
 			color: var(--white);
 		}
 	}

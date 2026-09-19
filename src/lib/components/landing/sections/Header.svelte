@@ -3,7 +3,7 @@
 
 	import Logo from "./components/header/Logo.svelte";
 	import Navigation from "./components/header/Navigation.svelte";
-	import Burger from "./components/header/Burger.svelte";
+	// import Burger from "./components/header/Burger.svelte";
 
     let scrolled = $state(false);
     let headerSentinel: HTMLElement;
@@ -34,7 +34,7 @@
     
             <Navigation />
             
-            <Burger />
+            <!-- <Burger /> -->
         
         </nav>
     </div>

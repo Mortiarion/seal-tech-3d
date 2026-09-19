@@ -3,7 +3,7 @@
 	import About from '$lib/components/landing/sections/About.svelte';
 	import Services from '$lib/components/landing/sections/Services.svelte';
 	import Portfolio from '$lib/components/landing/sections/Portfolio.svelte';
-	import Contact from '$lib/components/landing/sections/Contact.svelte';
+	import Contact from '$lib/components/landing/sections/Contacts.svelte';
 	import Procces from '$lib/components/landing/sections/Procces.svelte';
 </script>
 
@@ -13,16 +13,14 @@
 	</title>
 </svelte:head>
 
-<main class="overflow-hidden">
-	<Hero />
+<Hero />
 
-	<About />
+<About />
 
-	<Procces />
+<Procces />
 
-	<Services />
+<Services />
 
-	<Portfolio />
+<Portfolio />
 
-	<Contact />
-</main>
+<Contact />
