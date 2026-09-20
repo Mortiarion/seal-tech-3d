@@ -8,9 +8,7 @@
 </script>
 
 <svelte:head>
-	<title>
-		Seal Tech 3D - Студія 3D-друку
-	</title>
+	<title>Seal Tech 3D - Студія 3D-друку</title>
 </svelte:head>
 
 <Hero />

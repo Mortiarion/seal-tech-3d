@@ -1,28 +1,23 @@
-<script lang='ts'>
-	import EmailIcon from "$lib/components/icons/EmailIcon.svelte";
-	import PhoneIcon from "$lib/components/icons/PhoneIcon.svelte";
-	import TelegramIcon from "$lib/components/icons/TelegramIcon.svelte";
-	import { ERoutesNames } from "$lib/components/routing-helpers";
+<script lang="ts">
+	import EmailIcon from '$lib/components/icons/EmailIcon.svelte';
+	import PhoneIcon from '$lib/components/icons/PhoneIcon.svelte';
+	import TelegramIcon from '$lib/components/icons/TelegramIcon.svelte';
 </script>
 
-<section class="contact" id="contacts">
-	<div class="container p-5 lg:p-10 xl:p-20 mx-auto grid lg:grid-cols-2 gap-20">
-		<div>
-			<span class="main-section-label">
-				ЗВ'ЯЖІТЬСЯ З НАМИ
-			</span>
-	
+<section class="contacts" id="contacts">
+	<div class="container grid gap-20 lg:grid-cols-2">
+		<div class="pt-10">
+			<span class="main-section-label"> ЗВ'ЯЖІТЬСЯ З НАМИ </span>
+
 			<p>
-				Розкажіть про ваш проект — і ми допоможемо втілити вашу ідею в життя. 
-				Без зайвих питань, з особистим підходом.
+				Розкажіть про ваш проект — і ми допоможемо втілити вашу ідею в життя. Без зайвих питань, з
+				особистим підходом.
 			</p>
-	
-			
+
 			<div class="contact-links">
-	
-				<a 
-					href="tel:+380668038198" 
-					class="contact-link" 
+				<a
+					href="tel:+380668038198"
+					class="contact-link"
 					title="Розкажіть про ваш проект"
 					aria-label="Розкажіть про ваш проект"
 				>
@@ -31,21 +26,16 @@
 							<PhoneIcon />
 						</span>
 						Телефон
-						<i>
-							+380668038198
-						</i>
+						<i> +380668038198 </i>
 					</div>
-	
-					<span class="contact-arrow">
-						↗
-					</span>
-	
+
+					<span class="contact-arrow"> ↗ </span>
 				</a>
-	
-				<a 
-					href="https://t.me/SealTech3D" 
-					class="contact-link" 
-					target="_blank" 
+
+				<a
+					href="https://t.me/SealTech3D"
+					class="contact-link"
+					target="_blank"
 					rel="noopener"
 					title="Напишіть про ваш проект"
 					aria-label="Напишіть про ваш проект"
@@ -54,54 +44,34 @@
 						<span class="contact-icon">
 							<TelegramIcon />
 						</span>
-						Telegram 
-						<i>
-							@SealTech3D
-						</i>
+						Telegram
+						<i> @SealTech3D </i>
 					</div>
-	
-					<span class="contact-arrow">
-						↗
-					</span>
+
+					<span class="contact-arrow"> ↗ </span>
 				</a>
-	
-				<a 
-					href="mailto:sealtech3d@gmail.com" 
-					class="contact-link" 
-					title="Можна і так))"
-				>
+
+				<a href="mailto:sealtech3d@gmail.com" class="contact-link" title="Можна і так))">
 					<div class="contact-link-inner truncate">
 						<span class="contact-icon">
 							<EmailIcon />
 						</span>
-	
-						<i>
-							sealtech3d@gmail.com
-						</i>
+
+						<i> sealtech3d@gmail.com </i>
 					</div>
-	
-					<span class="contact-arrow">
-						↗
-					</span>
+
+					<span class="contact-arrow"> ↗ </span>
 				</a>
 			</div>
-
 		</div>
 
-		<a href={ERoutesNames.root} class="flex justify-center" title="На верх">
-			<img src="logo.png" width="440" loading="lazy" alt="logo">
+		<a href="/" class="flex justify-center" title="На верх">
+			<img src="/logo.png" width="440" loading="lazy" alt="logo" />
 		</a>
 	</div>
-	
 </section>
 
 <style lang="postcss">
-	.contact {
-		
-
-	
-	}
-
 	i {
 		color: var(--orange);
 	}
@@ -115,7 +85,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1px;
-
 	}
 
 	.contact-link {
@@ -154,7 +123,7 @@
 		font-size: 0.9rem;
 		transition: border-color 0.2s;
 	}
-	
+
 	.contact-arrow {
 		font-size: 1rem;
 		transition: transform 0.2s;
@@ -167,5 +136,4 @@
 	.contact-link:hover .contact-arrow {
 		transform: translate(3px, -3px);
 	}
-	
 </style>

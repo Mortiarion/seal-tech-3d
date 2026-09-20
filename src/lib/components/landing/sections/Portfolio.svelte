@@ -1,60 +1,49 @@
-<script lang='ts'>
-	import Arrow from "$lib/components/icons/Arrow.svelte";
+<script lang="ts">
+	import Arrow from '$lib/components/icons/Arrow.svelte';
 </script>
 
-<section class="portfolio border-bottom" id='portfolio'>
-	<div class="container p-5 lg:p-10 xl:p-20 mx-auto">
-		<div class="portfolio-inner md:grid-cols-2">
+<section class="portfolio border-bottom" id="portfolio">
+	<div class="container">
+		<div class="portfolio-inner py-10 md:grid-cols-2">
 			<div class="portfolio-left">
-				<span class="main-section-label">
-					Портфоліо
-				</span>
-	
-				<h3 class="portfolio-title">
-					НАШІ РОБОТИ
-				</h3>
-	
+				<span class="main-section-label"> Портфоліо </span>
+
+				<h3 class="portfolio-title">НАШІ РОБОТИ</h3>
+
 				<p class="portfolio-desc">
-					Ми пишаємося кожним проектом, який ми реалізували, 
-					і раді поділитися деякими з них з вами
+					Ми пишаємося кожним проектом, який ми реалізували, і раді поділитися деякими з них з вами
 				</p>
-	
-				<a href='/portfolio' class="main-link">
+
+				<a href="/portfolio" class="main-link">
 					Переглянути все
 					<span>
 						<Arrow />
 					</span>
 				</a>
 			</div>
-	
+
 			<div class="portfolio-collage hidden lg:block">
 				<div class="portfolio-item pi-center">
 					<div class="portfolio-img-wrap">
 						<img src="/portfolio-img/heart-mria.png" alt="heart-mria" loading="lazy" />
 					</div>
-	
-					<p class="item-name">
-						Годинник з підсвіткою "Серце Мрії" 
-					</p>
+
+					<p class="item-name">Годинник з підсвіткою "Серце Мрії"</p>
 				</div>
-	
+
 				<div class="portfolio-item pi-left">
 					<div class="portfolio-img-wrap">
 						<img src="/portfolio-img/kniga-shevshenko.png" alt="kniga-shevshenko" loading="lazy" />
 					</div>
-	
-					<p class="item-name">
-						Нагорода до конкурсу Шевченка
-					</p>
-				</div>
-	
 
+					<p class="item-name">Нагорода до конкурсу Шевченка</p>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-<style lang='postcss'>
+<style lang="postcss">
 	.portfolio {
 		position: relative;
 
@@ -77,16 +66,16 @@
 			display: grid;
 			gap: 5rem;
 			align-items: center;
-	
+
 			.portfolio-left {
 				display: flex;
 				flex-direction: column;
-			
+
 				.portfolio-title {
 					font-size: clamp(4rem, 7vw, 8rem);
 					margin-bottom: 2rem;
 				}
-			
+
 				.portfolio-desc {
 					line-height: 1.3;
 					color: var(--gray);
@@ -127,7 +116,7 @@
 			.portfolio-collage {
 				position: relative;
 				height: 520px;
-		
+
 				.portfolio-item {
 					position: absolute;
 					background: var(--mid);
@@ -135,7 +124,7 @@
 					display: flex;
 					flex-direction: column;
 					transition: box-shadow 0.3s;
-		
+
 					&:hover {
 						z-index: 10;
 						box-shadow: 0 20px 56px rgba(0, 0, 0, 0.75);
@@ -176,7 +165,7 @@
 						flex: 1;
 						min-height: 0;
 						overflow: hidden;
-						
+
 						& img {
 							width: 100%;
 							height: 100%;
@@ -197,8 +186,8 @@
 							transition: opacity 0.3s;
 						}
 					}
-					
-					&.pi-center, 
+
+					&.pi-center,
 					&.pi-left {
 						/* shared styles for all portfolio items */
 						border: 1px solid var(--border);
@@ -214,7 +203,7 @@
 						height: 100%;
 						/* z-index: 1; */
 					}
-				
+
 					/* 02 — square, left side, vertically centered */
 					&.pi-left {
 						left: -5%;

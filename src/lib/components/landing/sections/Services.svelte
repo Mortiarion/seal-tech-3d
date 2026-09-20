@@ -1,37 +1,26 @@
-<section class="services border-bottom" id="services">
-	<div class="container mx-auto p-5 lg:p-10 xl:p-20">
-
-		<div class="border-bottom mb-10">
-			<span class="main-section-label">
-				ПОСЛУГИ
-			</span>
+<section class="services border-bottom">
+	<div class="container">
+		<div class="border-bottom pt-10">
+			<span class="main-section-label"> ПОСЛУГИ </span>
 		</div>
-	
-		<div class="services-grid md:grid-cols-2">
+
+		<div class="services-grid pb-10 md:grid-cols-2">
 			<div class="service-card">
-				<div class="service-num">
-					01
-				</div>
-	
-				<div class="service-title">
-					СЕРІЙНИЙ ДРУК
-				</div>
-	
+				<div class="service-num">01</div>
+
+				<div class="service-title">СЕРІЙНИЙ ДРУК</div>
+
 				<p class="service-desc">
-					Малі та середні тиражі з однаковою якістю в кожній деталі. 
-					Гнучкі строки, конкурентні ціни.
+					Малі та середні тиражі з однаковою якістю в кожній деталі. Гнучкі строки, конкурентні
+					ціни.
 				</p>
 			</div>
-	
+
 			<div class="service-card">
-				<div class="service-num">
-					02
-				</div>
-	
-				<div class="service-title">
-					CUSTOM ВИРОБИ
-				</div>
-	
+				<div class="service-num">02</div>
+
+				<div class="service-title">CUSTOM ВИРОБИ</div>
+
 				<p class="service-desc">
 					Декор, сувеніри, cosplay-реквізит, подарунки — допоможемо з ескізом або в створенні
 					3D-файлому для друку.

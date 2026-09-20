@@ -1,6 +1,4 @@
-<footer>
-	© 2026 SealTech3D. Всі права захищені.
-</footer>
+<footer>© 2026 SealTech3D. Всі права захищені.</footer>
 
 <style lang="postcss">
 	footer {
@@ -12,5 +10,4 @@
 		letter-spacing: 0.05rem;
 		text-align: center;
 	}
-	
 </style>

@@ -1,115 +1,76 @@
-<section class="process border-bottom" id="procces">
-	<div class="container py-10">
-		<div class="intro">
-			<span class="main-section-label">
-                Як це працює
-            </span>
+<section class="procces border-bottom">
+	<div class="container">
+		<div class="intro pt-10">
+			<span class="main-section-label"> Як це працює </span>
 
-			<h2>
-                Ваша ідея — під вашим контролем
-            </h2>
+			<h2>Ваша ідея — під вашим контролем</h2>
 
 			<p class="subtitle">
-				На кожному етапі ви бачите результат і приймаєте рішення. 
-                Нічого не відбувається без
-				вашої згоди.
+				На кожному етапі ви бачите результат і приймаєте рішення. Нічого не відбувається без вашої
+				згоди.
 			</p>
 		</div>
 
 		<div class="steps md:grid-cols-4">
 			<div class="step">
 				<div class="step-top">
-					<span class="num">
-                        01
-                    </span>
+					<span class="num"> 01 </span>
 				</div>
 
 				<div class="step-content">
-					<h3>
-                        Ви розповідаєте ідею
-                    </h3>
+					<h3>Ви розповідаєте ідею</h3>
 
-					<p>
-						Опис, фото, ескіз або просто свої думки. 
-                        Нам важливо зрозуміти саме ваше
-						бачення.
-					</p>
+					<p>Опис, фото, ескіз або просто свої думки. Нам важливо зрозуміти саме ваше бачення.</p>
 				</div>
 			</div>
 
 			<div class="step">
 				<div class="step-top">
-					<span class="num">
-                        02
-                    </span>
+					<span class="num"> 02 </span>
 				</div>
 
 				<div class="step-content">
-					<h3>
-                        Ви бачите перший варіант
-                    </h3>
+					<h3>Ви бачите перший варіант</h3>
 
-					<p>
-						Показуємо, як ідея може виглядати. Ви вирішуєте, 
-                        що залишити, а що змінити.
-					</p>
+					<p>Показуємо, як ідея може виглядати. Ви вирішуєте, що залишити, а що змінити.</p>
 				</div>
 			</div>
 
 			<div class="step">
 				<div class="step-top">
-					<span class="num">
-                        03
-                    </span>
+					<span class="num"> 03 </span>
 				</div>
 
 				<div class="step-content">
-					<h3>
-                        Ви затверджуєте фінальний вигляд 3D-моделі
-                    </h3>
+					<h3>Ви затверджуєте фінальний вигляд 3D-моделі</h3>
 
-					<p>
-                        Коли все відповідає вашому задуму — даєте згоду 
-                        рухатися далі.
-                    </p>
+					<p>Коли все відповідає вашому задуму — даєте згоду рухатися далі.</p>
 				</div>
 			</div>
 
 			<div class="step">
 				<div class="step-top">
-					<span class="num">
-                        04
-                    </span>
+					<span class="num"> 04 </span>
 				</div>
 
 				<div class="step-content">
-					<h3>
-                        Ви отримуєте готову річ
-                    </h3>
+					<h3>Ви отримуєте готову річ</h3>
 
-					<p>
-                        Фізичний об'єкт, створений за вашими рішеннями. 
-                        Ідея стає реальною.
-                    </p>
+					<p>Фізичний об'єкт, створений за вашими рішеннями. Ідея стає реальною.</p>
 				</div>
 			</div>
 		</div>
 
-		<a 
-			href="#contacts" 
-			class="btn" 
-			title="Перейти до секції" 
-			aria-label="Перейти до секції"
-		>
+		<a href="/#contacts" class="btn" title="Перейти до секції" aria-label="Перейти до секції">
 			Розповісти про свою ідею
 		</a>
 	</div>
 </section>
 
 <style lang="postcss">
-	.process {
+	.procces {
 		background: var(--bg-section-procces);
-		margin: 20px;
+		margin: 1rem;
 
 		.intro {
 			max-width: 650px;
@@ -122,7 +83,7 @@
 				margin: 0 0 20px;
 				font-weight: 600;
 			}
-		
+
 			.subtitle {
 				color: var(--subtitle-section-procces);
 				font-size: 1.05rem;
@@ -131,7 +92,7 @@
 				max-width: 580px;
 			}
 		}
-	
+
 		.steps {
 			position: relative;
 			display: grid;
@@ -156,7 +117,7 @@
 					height: 40px;
 					display: flex;
 					align-items: center;
-					
+
 					&::before {
 						content: '';
 						position: absolute;
@@ -191,7 +152,7 @@
 						font-weight: 600;
 						letter-spacing: -0.01em;
 					}
-				
+
 					p {
 						font-size: 0.92rem;
 						line-height: 1.65;
@@ -201,7 +162,7 @@
 				}
 			}
 		}
-	
+
 		.btn {
 			display: flex;
 			margin: 0 auto;
@@ -212,6 +173,7 @@
 			padding: 15px 20px 15px 24px;
 			font-weight: 600;
 			border-radius: 8px;
+			margin-bottom: 2.5rem;
 			transition:
 				transform 180ms ease,
 				background 180ms ease;
@@ -224,7 +186,7 @@
 	}
 
 	@media (min-width: 768px) {
-		.process {
+		.procces {
 			.steps::before {
 				bottom: auto;
 				left: 0;

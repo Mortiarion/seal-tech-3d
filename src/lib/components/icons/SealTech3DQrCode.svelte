@@ -1,20 +1,3 @@
-<!-- <script lang="ts">
-	import QRCode from 'qrcode';
-
-	const url = 'https://seal-tech-3d.vercel.app';
-
-	let svgString = $state<string | null>(null);
-
-	QRCode.toString(url, { type: 'svg' }).then((svg) => {
-		svgString = svg;
-	});
-</script>
-
-{#if svgString}
-	eslint-disable-next-line svelte/no-at-html-tags
-	{@html svgString}
-{/if} -->
-
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" shape-rendering="crispEdges"
 	><path fill="#ffffff" d="M0 0h37v37H0z"></path><path
 		stroke="#000000"

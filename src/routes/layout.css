@@ -12,7 +12,6 @@
 	--mid: #141414;
 	--gray: #6b6864;
 	--border: #ffffff12;
-	--text: #f0ede8;
 	--text2: #9e9b94;
 	--text3: #5a5855;
 	--bg-section-procces: #0f0f0f;
@@ -26,7 +25,7 @@
 	--yellow: #f0cd13;
 	--accent-green: #73d62b;
 	--green: #03a337;
-	--other-green:#4ade80;
+	--other-green: #4ade80;
 	--accent-orange: #e8500a;
 	--accent-orange2: #ff6a25;
 
@@ -49,7 +48,7 @@ body {
 }
 
 .container {
-	@apply mx-auto px-5 lg:px-10 xl:px-20
+	@apply mx-auto px-5 lg:px-10 xl:px-20;
 }
 
 header {

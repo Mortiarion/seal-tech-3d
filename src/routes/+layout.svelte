@@ -16,14 +16,12 @@
 	/>
 </svelte:head>
 
-<div class="flex flex-col min-h-dvh">
+<div class="flex min-h-dvh flex-col">
 	<Header />
 
 	<main class="flex-1 overflow-hidden">
-		
 		{@render children()}
-		
 	</main>
-	
+
 	<Footer />
 </div>
