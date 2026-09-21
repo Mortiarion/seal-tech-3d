@@ -66,7 +66,7 @@
 				.service-num {
 					font-family: var(--font-display);
 					font-size: 4rem;
-					color: #222;
+					color: #4a4a4a;
 					line-height: 1;
 					margin-bottom: 1.5rem;
 					transition: color 0.3s;

@@ -1,68 +1,174 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
-	type TView = 'front' | 'back';
-
-	interface ISlideImages {
+	interface IProjectImage {
 		src: string;
+		srcset: string;
+		width: number;
+		height: number;
 		alt: string;
 	}
 
-	const slideImages: Record<TView, ISlideImages> = {
-		front: {
-			src: '/portfolio-img/statue-front.png',
-			alt: 'Statue front view'
+	interface IProject {
+		id: string;
+		title: string;
+		category: string;
+		description: string;
+		images: IProjectImage[];
+	}
+
+	const projects: IProject[] = [
+		{
+			id: 'statue',
+			title: 'Памʼятна статуетка НАПН України',
+			category: 'Нагороди',
+			description:
+				'Статуетка до 100-річчя Інституту педагогіки НАПН України: розгорнута книга на підставці у вигляді переплетених стебел.',
+			images: [
+				{
+					src: '/portfolio-img/statue-front-1254.webp',
+					srcset:
+						'/portfolio-img/statue-front-640.webp 640w, /portfolio-img/statue-front-1254.webp 1254w',
+					width: 1254,
+					height: 1254,
+					alt: 'Статуетка, вигляд спереду'
+				},
+				{
+					src: '/portfolio-img/statue-back-1254.webp',
+					srcset:
+						'/portfolio-img/statue-back-640.webp 640w, /portfolio-img/statue-back-1254.webp 1254w',
+					width: 1254,
+					height: 1254,
+					alt: 'Статуетка, вигляд ззаду'
+				}
+			]
 		},
-		back: {
-			src: '/portfolio-img/statue-back.png',
-			alt: 'Statue back view'
+		{
+			id: 'heart-mria',
+			title: 'Годинник з підсвіткою «Серце Мрії»',
+			category: 'Декор',
+			description:
+				'Настільний годинник з декоративною підсвіткою та індивідуальним дизайном корпусу.',
+			images: [
+				{
+					src: '/portfolio-img/heart-mria-1024.webp',
+					srcset:
+						'/portfolio-img/heart-mria-640.webp 640w, /portfolio-img/heart-mria-1024.webp 1024w',
+					width: 1024,
+					height: 1536,
+					alt: 'Годинник «Серце Мрії»'
+				}
+			]
+		},
+		{
+			id: 'kniga-shevshenko',
+			title: 'Нагорода до конкурсу Шевченка',
+			category: 'Нагороди',
+			description:
+				'Памʼятна нагорода для учасників конкурсу — книга з рельєфним тисненням та іменним оформленням.',
+			images: [
+				{
+					src: '/portfolio-img/kniga-shevshenko-1024.webp',
+					srcset:
+						'/portfolio-img/kniga-shevshenko-640.webp 640w, /portfolio-img/kniga-shevshenko-1024.webp 1024w',
+					width: 1024,
+					height: 1536,
+					alt: 'Нагорода до конкурсу Шевченка'
+				}
+			]
 		}
-	};
+	];
 
-	const slideOrder: TView[] = ['front', 'back'];
-	let activeSlide = $state(0);
-	let currentView = $derived(slideOrder[activeSlide]);
-	let currentImage = $derived(slideImages[currentView]);
-	let pause = $state(false);
+	let activeViews = $state<Record<string, number>>({});
 
-	onMount(() => {
-		const interval = setInterval(() => {
-			if (!pause) activeSlide = (activeSlide + 1) % slideOrder.length;
-		}, 2000);
+	function viewIndex(project: IProject) {
+		return activeViews[project.id] ?? 0;
+	}
 
-		return () => clearInterval(interval);
-	});
+	function setView(projectId: string, index: number) {
+		activeViews = { ...activeViews, [projectId]: index };
+	}
 </script>
 
 <svelte:head>
 	<title>SealTech3D - Портфоліо</title>
+
+	<meta
+		name="description"
+		content="Портфоліо SealTech3D: памʼятні нагороди, статуетки, декор та вироби на замовлення, надруковані на 3D-принтері."
+	/>
+
+	<meta property="og:title" content="SealTech3D - Портфоліо" />
+	<meta
+		property="og:description"
+		content="Памʼятні нагороди, статуетки, декор та вироби на замовлення, надруковані на 3D-принтері."
+	/>
+	<meta property="og:url" content="/portfolio" />
+
+	<meta name="twitter:title" content="SealTech3D - Портфоліо" />
+	<meta
+		name="twitter:description"
+		content="Памʼятні нагороди, статуетки, декор та вироби на замовлення, надруковані на 3D-принтері."
+	/>
 </svelte:head>
 
 <section class="portfolio">
 	<div class="container">
 		<div class="portfolio-hero pt-35 md:pt-60">
+			<span class="main-section-label"> Портфоліо </span>
+
+			<h1 class="portfolio-title">НАШІ РОБОТИ</h1>
+
 			<p class="head">
-				Від ідеї до готового виробу. Тут ви можете побачити проекти, які ми допомогли втілили в
+				Від ідеї до готового виробу. Тут ви можете побачити проекти, які ми допомогли втілити в
 				життя. Ваша ідея може бути слідуюча
 			</p>
 		</div>
 
-		<div class="portfolio-carousel">
-			<button
-				class="slide-card"
-				onmouseenter={() => (pause = true)}
-				onmouseleave={() => (pause = false)}
-			>
-				<div class="slide-image">
-					<img src={currentImage.src} alt={currentImage.alt} />
-				</div>
+		<div class="portfolio-grid">
+			{#each projects as project, projectIndex (project.id)}
+				<article class="project-card">
+					<div class="project-image">
+						<img
+							src={project.images[viewIndex(project)].src}
+							srcset={project.images[viewIndex(project)].srcset}
+							sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+							width={project.images[viewIndex(project)].width}
+							height={project.images[viewIndex(project)].height}
+							alt={project.images[viewIndex(project)].alt}
+							loading={projectIndex === 0 ? 'eager' : 'lazy'}
+							decoding="async"
+						/>
 
-				<div class="slide-info">
-					<span class="slide-number">01</span>
-					<span class="slide-title">Statue</span>
-					<span class="slide-view">{currentView}</span>
-				</div>
-			</button>
+						{#if project.images.length > 1}
+							<div class="view-switcher">
+								{#each project.images as image, imageIndex (image.src)}
+									<button
+										type="button"
+										class="view-dot"
+										class:active={viewIndex(project) === imageIndex}
+										aria-label={image.alt}
+										aria-pressed={viewIndex(project) === imageIndex}
+										onclick={() => setView(project.id, imageIndex)}
+									></button>
+								{/each}
+							</div>
+						{/if}
+					</div>
+
+					<div class="project-info">
+						<div class="project-meta">
+							<span class="project-number">
+								{String(projectIndex + 1).padStart(2, '0')}
+							</span>
+
+							<span class="project-category">{project.category}</span>
+						</div>
+
+						<h2 class="project-title">{project.title}</h2>
+
+						<p class="project-desc">{project.description}</p>
+					</div>
+				</article>
+			{/each}
 		</div>
 
 		<div class="portfolio-cta">
@@ -123,47 +229,78 @@
 		}
 	}
 
-	.portfolio-carousel {
-		min-width: 200px;
-		width: 100%;
-		max-width: 400px;
+	.portfolio-title {
+		font-size: clamp(2.5rem, 9vw, 5rem);
+		line-height: 1;
 		margin-bottom: 2rem;
+		color: var(--text);
+	}
 
-		.slide-card {
-			display: block;
-			position: relative;
-			overflow: hidden;
+	.portfolio-grid {
+		display: grid;
+		gap: 1.5rem;
+		grid-template-columns: 1fr;
+		margin-bottom: 3rem;
 
-			background: var(--bg2);
-			border: 1px solid var(--border);
-			border-radius: 12px;
-
-			transition:
-				border-color 300ms ease,
-				transform 300ms ease,
-				box-shadow 300ms ease;
+		@media (min-width: 640px) {
+			grid-template-columns: repeat(2, 1fr);
 		}
 
-		.slide-image {
-			position: relative;
-			aspect-ratio: 1 / 1;
-			overflow: hidden;
-			background: var(--bg3);
+		@media (min-width: 1024px) {
+			grid-template-columns: repeat(3, 1fr);
 		}
+	}
 
-		.slide-image::after {
+	.project-card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		overflow: hidden;
+		background: var(--bg2);
+		border: 1px solid var(--border);
+		border-radius: 12px;
+		transition:
+			border-color 300ms ease,
+			transform 300ms ease,
+			box-shadow 300ms ease;
+
+		/* green accent bar slides down on hover */
+		&::before {
 			content: '';
 			position: absolute;
-			inset: 0;
-			background: linear-gradient(
-				to bottom,
-				transparent 45%,
-				color-mix(in srgb, var(--bg-body) 55%, transparent)
-			);
-			pointer-events: none;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 0;
+			background: var(--accent-green);
+			z-index: 3;
+			transition: height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		}
 
-		.slide-image img {
+		@media (hover: hover) {
+			&:hover {
+				border-color: var(--accent-green);
+				transform: translateY(-6px);
+				box-shadow: 0 14px 32px color-mix(in srgb, var(--black) 55%, transparent);
+
+				&::before {
+					height: 100%;
+				}
+
+				.project-image img {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+
+	.project-image {
+		position: relative;
+		aspect-ratio: 4 / 5;
+		overflow: hidden;
+		background: var(--bg3);
+
+		img {
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
@@ -171,47 +308,92 @@
 			transition: transform 500ms ease;
 		}
 
-		.slide-card:hover {
-			border-color: var(--accent-green);
-			transform: translateY(-6px);
-			box-shadow: 0 14px 32px color-mix(in srgb, var(--text) 8%, transparent);
+		&::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(
+				to bottom,
+				transparent 55%,
+				color-mix(in srgb, var(--bg-body) 60%, transparent)
+			);
+			pointer-events: none;
+		}
+	}
+
+	.view-switcher {
+		position: absolute;
+		right: 12px;
+		bottom: 12px;
+		z-index: 4;
+		display: flex;
+		gap: 6px;
+	}
+
+	.view-dot {
+		width: 9px;
+		height: 9px;
+		padding: 0;
+		border: 1px solid var(--border);
+		border-radius: 50%;
+		background: color-mix(in srgb, var(--white) 35%, transparent);
+		cursor: pointer;
+		transition:
+			background-color 0.3s ease,
+			transform 0.3s ease;
+
+		&.active {
+			background: var(--accent-green);
+			transform: scale(1.2);
 		}
 
-		.slide-card:hover .slide-image img {
-			transform: scale(1.05);
+		@media (hover: hover) {
+			&:hover {
+				background: var(--accent-orange);
+			}
 		}
+	}
 
-		.slide-info {
-			display: grid;
-			grid-template-columns: auto 1fr auto;
-			align-items: center;
-			gap: 12px;
+	.project-info {
+		padding: 1.25rem;
+		border-top: 1px solid var(--border);
+	}
 
-			padding: 14px 16px;
-			border-top: 1px solid var(--border);
-			background: var(--bg2);
+	.project-meta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.75rem;
+		margin-bottom: 0.75rem;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		font-weight: 600;
+	}
 
-			font-family: var(--font-body);
-			font-size: 12px;
-			text-transform: uppercase;
-			letter-spacing: 0.08em;
-		}
+	.project-number {
+		color: var(--accent-green);
+	}
 
-		.slide-number {
-			color: var(--accent-green);
-			font-weight: 600;
-		}
+	.project-category {
+		color: var(--accent-orange);
+	}
 
-		.slide-title {
-			color: var(--text);
-			font-weight: 600;
-			letter-spacing: 0.04em;
-		}
+	.project-title {
+		margin: 0 0 0.5rem;
+		font-family: var(--font-display);
+		font-size: clamp(1.25rem, 3vw, 1.6rem);
+		line-height: 1.1;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--text);
+	}
 
-		.slide-view {
-			color: var(--accent-orange);
-			font-weight: 500;
-		}
+	.project-desc {
+		margin: 0;
+		font-size: 0.875rem;
+		line-height: 1.5;
+		color: var(--text2);
 	}
 
 	.portfolio-cta {

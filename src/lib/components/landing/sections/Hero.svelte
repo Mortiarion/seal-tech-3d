@@ -5,7 +5,7 @@
 
 <section class="hero border-bottom">
 	<div class="container">
-		<div class="grid grid-cols-2">
+		<div class="grid md:grid-cols-2">
 			<HeroLeft />
 
 			<HeroRight />

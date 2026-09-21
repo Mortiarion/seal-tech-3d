@@ -7,7 +7,7 @@
 <section class="contacts" id="contacts">
 	<div class="container grid gap-20 lg:grid-cols-2">
 		<div class="pt-10">
-			<span class="main-section-label"> ЗВ'ЯЖІТЬСЯ З НАМИ </span>
+			<h2 class="main-section-label">ЗВ'ЯЖІТЬСЯ З НАМИ</h2>
 
 			<p>
 				Розкажіть про ваш проект — і ми допоможемо втілити вашу ідею в життя. Без зайвих питань, з
@@ -66,7 +66,15 @@
 		</div>
 
 		<a href="/" class="flex justify-center" title="На верх">
-			<img src="/logo.png" width="440" loading="lazy" alt="logo" />
+			<img
+				src="/logo-360.webp"
+				srcset="/logo-96.webp 96w, /logo-360.webp 360w"
+				sizes="440px"
+				width="540"
+				height="540"
+				loading="lazy"
+				alt="SealTech3D — студія 3D-друку"
+			/>
 		</a>
 	</div>
 </section>
@@ -102,8 +110,8 @@
 		text-transform: uppercase;
 
 		&:hover {
-			background: var(--green);
-			color: var(--white);
+			background: var(--accent-green);
+			color: #111;
 		}
 	}
 

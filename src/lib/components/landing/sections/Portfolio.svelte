@@ -8,7 +8,7 @@
 			<div class="portfolio-left">
 				<span class="main-section-label"> Портфоліо </span>
 
-				<h3 class="portfolio-title">НАШІ РОБОТИ</h3>
+				<h2 class="portfolio-title">НАШІ РОБОТИ</h2>
 
 				<p class="portfolio-desc">
 					Ми пишаємося кожним проектом, який ми реалізували, і раді поділитися деякими з них з вами
@@ -22,10 +22,19 @@
 				</a>
 			</div>
 
-			<div class="portfolio-collage hidden lg:block">
+			<div class="portfolio-collage hidden md:block">
 				<div class="portfolio-item pi-center">
 					<div class="portfolio-img-wrap">
-						<img src="/portfolio-img/heart-mria.png" alt="heart-mria" loading="lazy" />
+						<img
+							src="/portfolio-img/heart-mria-1024.webp"
+							srcset="/portfolio-img/heart-mria-640.webp 640w, /portfolio-img/heart-mria-1024.webp 1024w"
+							sizes="(min-width: 1024px) 45vw, 45vw"
+							width="1024"
+							height="1536"
+							alt="Годинник з підсвіткою «Серце Мрії»"
+							loading="lazy"
+							decoding="async"
+						/>
 					</div>
 
 					<p class="item-name">Годинник з підсвіткою "Серце Мрії"</p>
@@ -33,7 +42,16 @@
 
 				<div class="portfolio-item pi-left">
 					<div class="portfolio-img-wrap">
-						<img src="/portfolio-img/kniga-shevshenko.png" alt="kniga-shevshenko" loading="lazy" />
+						<img
+							src="/portfolio-img/kniga-shevshenko-1024.webp"
+							srcset="/portfolio-img/kniga-shevshenko-640.webp 640w, /portfolio-img/kniga-shevshenko-1024.webp 1024w"
+							sizes="(min-width: 1024px) 40vw, 40vw"
+							width="1024"
+							height="1536"
+							alt="Нагорода до конкурсу Шевченка"
+							loading="lazy"
+							decoding="async"
+						/>
 					</div>
 
 					<p class="item-name">Нагорода до конкурсу Шевченка</p>
@@ -88,8 +106,8 @@
 					font-weight: 600;
 					letter-spacing: 0.2rem;
 					text-transform: uppercase;
-					color: var(--white);
-					background-color: var(--green);
+					color: #111;
+					background-color: var(--accent-green);
 					font-size: 1rem;
 					padding: 1rem;
 					align-items: center;
@@ -100,7 +118,7 @@
 
 					&:hover {
 						background-color: var(--orange);
-						color: var(--white);
+						color: #111;
 					}
 
 					span {

@@ -1,5 +1,12 @@
-<a href="/" title="Тюляп))">
-	<img src="/logo.png" loading="lazy" alt="logo" />
+<a href="/" title="SealTech3D">
+	<img
+		src="/logo-360.webp"
+		srcset="/logo-96.webp 96w, /logo-360.webp 360w"
+		sizes="(min-width: 768px) 180px, 80px"
+		width="540"
+		height="540"
+		alt="SealTech3D — студія 3D-друку"
+	/>
 </a>
 
 <style lang="postcss">

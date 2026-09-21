@@ -133,6 +133,16 @@
 		}
 	}
 
+	/* the stack animates forever in the middle of the first screen — stop it for
+	   people who ask for reduced motion instead of leaving 20 layers pulsing */
+	@media (prefers-reduced-motion: reduce) {
+		.layer-stack .layer {
+			animation: none;
+			opacity: 1;
+			transform: none;
+		}
+	}
+
 	@keyframes buildUp {
 		from {
 			opacity: 0;

@@ -1,5 +1,5 @@
 <div class=" flex items-center gap-5">
-	<a href="/#portfolio" title="Перейти до секції" aria-label="Перейти до секції"> Портфоліо </a>
+	<a href="/portfolio" title="Перейти до портфоліо"> Портфоліо </a>
 
 	<a href="/#contacts" title="Перейти до секції" aria-label="Перейти до секції"> Контакти </a>
 </div>
