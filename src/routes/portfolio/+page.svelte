@@ -74,6 +74,43 @@
 					alt: 'Нагорода до конкурсу Шевченка'
 				}
 			]
+		},
+		{
+			id: 'heart-moshun',
+			title: 'Подарунковий брелок "Незламний Мощун"',
+			category: 'Аксесуари',
+			description: 'Брелок з написом «Мощун» — теплий сувенір для своїх, гостей, волонтерів і всіх, хто серцем з Мощуном.',
+			images: [
+				{
+					src: '/portfolio-img/heart-moshun-1024.webp',
+					srcset: '/portfolio-img/heart-moshun-640.webp 640w, /portfolio-img/heart-moshun-1024.webp 1024w,',
+					width: 1024,
+					height: 1536,
+					alt: 'Незламний Мощун',
+				}
+			] 
+		},
+		{
+			id: '',
+			title: 'Вічний календар « Український танець»',
+			category: 'Нагороди',
+			description: 'Настільний вічний календар з обертовими дисками: число, місяць, день тижня. Підійде як нагорода для танцювальних конкурсів, сувенір керівнику колективу або декор для дому і студії',
+			images: [
+				{
+					src: '/portfolio-img/concurs-granpri-1024.webp',
+					srcset: '/portfolio-img/concurs-granpri-640.webp 640w, /portfolio-img/concurs-granpri-1024.webp 1024w,',
+					width: 1024,
+					height: 1536,
+					alt: 'concurs-granpri',
+				},
+				{
+					src: '/portfolio-img/concurs-three-1024.webp',
+					srcset: '/portfolio-img/concurs-three-640.webp 640w, /portfolio-img/concurs-three-1024.webp 1024w,',
+					width: 1024,
+					height: 1536,
+					alt: 'concurs-three',
+				}
+			]
 		}
 	];
 
