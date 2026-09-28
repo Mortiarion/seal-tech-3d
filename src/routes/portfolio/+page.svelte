@@ -370,7 +370,7 @@
 	.view-dot {
 		width: 9px;
 		height: 9px;
-		padding: .5rem;
+		padding: .25rem;
 		margin: .25rem;
 		border: 1px solid var(--border);
 		border-radius: 50%;
@@ -389,6 +389,13 @@
 			&:hover {
 				background: var(--accent-orange);
 			}
+		}
+	}
+
+	@media (max-width: 768px) {
+		.view-dot {
+			padding: .5rem;
+			margin: .25rem;
 		}
 	}
 
