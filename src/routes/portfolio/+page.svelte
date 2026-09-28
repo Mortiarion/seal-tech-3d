@@ -370,7 +370,8 @@
 	.view-dot {
 		width: 9px;
 		height: 9px;
-		padding: 0;
+		padding: .5rem;
+		margin: .25rem;
 		border: 1px solid var(--border);
 		border-radius: 50%;
 		background: color-mix(in srgb, var(--white) 35%, transparent);
