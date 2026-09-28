@@ -83,7 +83,7 @@
 			images: [
 				{
 					src: '/portfolio-img/heart-moshun-1024.webp',
-					srcset: '/portfolio-img/heart-moshun-640.webp 640w, /portfolio-img/heart-moshun-1024.webp 1024w,',
+					srcset: '/portfolio-img/heart-moshun-640.webp 640w, /portfolio-img/heart-moshun-1254.webp 1254w,',
 					width: 1024,
 					height: 1536,
 					alt: 'Незламний Мощун',
@@ -98,14 +98,14 @@
 			images: [
 				{
 					src: '/portfolio-img/concurs-granpri-1024.webp',
-					srcset: '/portfolio-img/concurs-granpri-640.webp 640w, /portfolio-img/concurs-granpri-1024.webp 1024w,',
+					srcset: '/portfolio-img/concurs-granpri-640.webp 640w, /portfolio-img/concurs-granpri-1254.webp 1254w,',
 					width: 1024,
 					height: 1536,
 					alt: 'concurs-granpri',
 				},
 				{
 					src: '/portfolio-img/concurs-three-1024.webp',
-					srcset: '/portfolio-img/concurs-three-640.webp 640w, /portfolio-img/concurs-three-1024.webp 1024w,',
+					srcset: '/portfolio-img/concurs-three-640.webp 640w, /portfolio-img/concurs-three-1254.webp 1254w,',
 					width: 1024,
 					height: 1536,
 					alt: 'concurs-three',
