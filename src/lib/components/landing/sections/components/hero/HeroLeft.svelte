@@ -1,5 +1,5 @@
 <div class="hero-left pt-35 pb-5 md:pt-60 md:pb-10">
-	<span class="main-section-label"> Студія 3D Друк </span>
+	<span class="main-section-label"> Студія 3D Друк та IT-розробка </span>
 
 	<!-- Where ideas become real  -->
 
@@ -14,7 +14,7 @@
 
 	<p class="hero-desc">
 		Друкуємо на замовлення: від подарунків і декоративних моделей до функціональних деталей та
-		прототипів.
+		прототипів. А ще створюємо сайти — від лендінгів до багатосторінкових проєктів.
 	</p>
 
 	<div class="hero-actions">
