@@ -1,7 +1,7 @@
 <script lang="ts">
-	import EmailIcon from '$lib/components/icons/EmailIcon.svelte';
-	import PhoneIcon from '$lib/components/icons/PhoneIcon.svelte';
-	import TelegramIcon from '$lib/components/icons/TelegramIcon.svelte';
+	import EmailIcon from '#lib/components/icons/EmailIcon.svelte';
+	import PhoneIcon from '#lib/components/icons/PhoneIcon.svelte';
+	import TelegramIcon from '#lib/components/icons/TelegramIcon.svelte';
 </script>
 
 <section class="contacts" id="contacts">

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Projects3d from '$lib/components/portfolio/3d.svelte';
-	import ProjectsIt from '$lib/components/portfolio/It.svelte';
-	import { projects3d, projectsIt } from '$lib/components/portfolio/data';
+	import Projects3d from '#lib/components/portfolio/3d.svelte';
+	import ProjectsIt from '#lib/components/portfolio/It.svelte';
+	import { projects3d, projectsIt } from '#lib/components/portfolio/data.js';
 
 	let activeTab = $state<'3d' | 'it'>('3d');
 
@@ -27,7 +27,10 @@
 	<meta property="og:url" content="/portfolio" />
 
 	<meta name="twitter:title" content="SealTech3D - Портфоліо" />
-	<meta name="twitter:description" content="Памʼятні нагороди, статуетки, декор та розробка сайтів." />
+	<meta
+		name="twitter:description"
+		content="Памʼятні нагороди, статуетки, декор та розробка сайтів."
+	/>
 </svelte:head>
 
 <section class="portfolio">
@@ -38,8 +41,8 @@
 			<h1 class="portfolio-title">НАШІ РОБОТИ</h1>
 
 			<p class="head">
-				Від ідеї до готового результату. Тут ви можете побачити проекти, які ми допомогли втілити
-				в життя. Ваша ідея може бути слідуюча
+				Від ідеї до готового результату. Тут ви можете побачити проекти, які ми допомогли втілити в
+				життя. Ваша ідея може бути наступною
 			</p>
 		</div>
 

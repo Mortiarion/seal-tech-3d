@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Footer from '$lib/components/landing/sections/Footer.svelte';
-	import Header from '$lib/components/landing/sections/Header.svelte';
+	import Footer from '#lib/components/landing/sections/Footer.svelte';
+	import Header from '#lib/components/landing/sections/Header.svelte';
 	import './layout.css';
 
 	let { children } = $props();

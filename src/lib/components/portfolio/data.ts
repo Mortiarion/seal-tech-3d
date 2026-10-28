@@ -30,11 +30,13 @@ export const projects3d: IProject[] = [
 		id: 'heart-mria',
 		title: 'Годинник з підсвіткою «Серце Мрії»',
 		category: 'Декор',
-		description: 'Настільний годинник з декоративною підсвіткою та індивідуальним дизайном корпусу.',
+		description:
+			'Настільний годинник з декоративною підсвіткою та індивідуальним дизайном корпусу.',
 		images: [
 			{
 				src: '/portfolio-img/heart-mria-1024.webp',
-				srcset: '/portfolio-img/heart-mria-640.webp 640w, /portfolio-img/heart-mria-1024.webp 1024w',
+				srcset:
+					'/portfolio-img/heart-mria-640.webp 640w, /portfolio-img/heart-mria-1024.webp 1024w',
 				width: 1024,
 				height: 1536,
 				alt: 'Годинник «Серце Мрії»'
@@ -67,7 +69,8 @@ export const projects3d: IProject[] = [
 		images: [
 			{
 				src: '/portfolio-img/heart-moshun-1024.webp',
-				srcset: '/portfolio-img/heart-moshun-640.webp 640w, /portfolio-img/heart-moshun-1254.webp 1254w',
+				srcset:
+					'/portfolio-img/heart-moshun-640.webp 640w, /portfolio-img/heart-moshun-1254.webp 1254w',
 				width: 1024,
 				height: 1536,
 				alt: 'Незламний Мощун'
@@ -83,14 +86,16 @@ export const projects3d: IProject[] = [
 		images: [
 			{
 				src: '/portfolio-img/concurs-granpri-1024.webp',
-				srcset: '/portfolio-img/concurs-granpri-640.webp 640w, /portfolio-img/concurs-granpri-1254.webp 1254w',
+				srcset:
+					'/portfolio-img/concurs-granpri-640.webp 640w, /portfolio-img/concurs-granpri-1254.webp 1254w',
 				width: 1024,
 				height: 1536,
 				alt: 'Вічний календар «Український танець»'
 			},
 			{
 				src: '/portfolio-img/concurs-three-1024.webp',
-				srcset: '/portfolio-img/concurs-three-640.webp 640w, /portfolio-img/concurs-three-1254.webp 1254w',
+				srcset:
+					'/portfolio-img/concurs-three-640.webp 640w, /portfolio-img/concurs-three-1254.webp 1254w',
 				width: 1024,
 				height: 1536,
 				alt: 'Вічний календар, вигляд з іншого боку'
@@ -127,7 +132,8 @@ export const projectsIt: IProject[] = [
 		images: [
 			{
 				src: '/portfolio-img/precedent-law-1280.webp',
-				srcset: '/portfolio-img/precedent-law-640.webp 640w, /portfolio-img/precedent-law-1280.webp 1280w',
+				srcset:
+					'/portfolio-img/precedent-law-640.webp 640w, /portfolio-img/precedent-law-1280.webp 1280w',
 				width: 1280,
 				height: 1600,
 				alt: 'Сайт «Прецедент права»'
